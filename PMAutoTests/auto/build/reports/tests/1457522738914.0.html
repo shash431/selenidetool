@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head>
+        <meta charset="UTF-8" />
+        <title>ResourceAllocation</title>
+      <link href="/Content/css/reset.css" rel="stylesheet" />
+       <link type="text/css" rel="stylesheet" href="/Scripts/utils/bootstrap-3.3.2/css/bootstrap.css" />
+          <link href="/Content/css/clearfix.css" rel="stylesheet" />
+        
+        
+        <link type="text/css" rel="stylesheet" href="/Content/css/font-awesome.min.css" />
+        <link href="/Scripts/utils/bootstrap-star-rating-master/css/star-rating.css" type="text/css" rel="stylesheet" />
+        <link href="/Content/css/jquery-ui.structure.css" rel="stylesheet" />
+        <link href="/Content/css/jquery-ui.theme.css" rel="stylesheet" />
+        <link href="/Content/css/styles.css" rel="stylesheet" />
+        <link href="/Content/css/jquery.toastmessage.css" rel="stylesheet" />
+        <link href="/Content/css/bootstrap.colorpickersliders.css" rel="stylesheet" />
+        <link href="/Content/css/farbtastic.css" rel="stylesheet" />
+        <link href="/Scripts/utils/slick/slick.css" type="text/css" rel="stylesheet" />
+        <link href="/Scripts/utils/timepicker/jquery.timepicker.css" type="text/css" rel="stylesheet" />
+        <link href="/Scripts/utils/mCustomScrollbar/jquery.mCustomScrollbar.css" type="text/css" rel="stylesheet" />
+        <link href="//blueimp.github.io/Gallery/css/blueimp-gallery.min.css" rel="stylesheet" />
+        <!-- CSS to style the file input field as button and adjust the Bootstrap progress bars -->
+        <link href="/Scripts/utils/jQuery-File-Upload-9.10.5/css/jquery.fileupload.css" type="text/css" rel="stylesheet" />
+        <link href="/Scripts/utils/jQuery-File-Upload-9.10.5/css/jquery.fileupload-ui.css" type="text/css" rel="stylesheet" />
+        <link href="/Scripts/utils/alertify.js-0.3.11/themes/alertify.core.css" type="text/css" rel="stylesheet" />
+        <link href="/Scripts/utils/alertify.js-0.3.11/themes/alertify.bootstrap.css" type="text/css" rel="stylesheet" />
+        <link href="/Scripts/utils/bootstrap-datepicker/css/bootstrap-datepicker.css" type="text/css" rel="stylesheet" />
+        <link href="/Scripts/utils/flipclock/compiled/flipclock.css" type="text/css" rel="stylesheet" />
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" />
+        
+        
+        <script type="text/javascript" src="/Scripts/jquery-1.9.1.min.js"></script>
+        <script src="/Scripts/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="/Scripts/utils/bootstrap-3.3.2/js/bootstrap.js"></script>
+        <script type="text/javascript" src="/Scripts/backbone/underscore-min.js"></script>
+        <script type="text/javascript" src="/Scripts/backbone/backbone.js"></script>
+        <script type="text/javascript" src="/Scripts/utils/Ajax.js"></script>
+        <script type="text/javascript" src="/Scripts/utils/AjaxLoader.js"></script>
+        <script type="text/javascript" src="/Scripts/utils/PageLoader.js"></script>
+        <script type="text/javascript" src="/Scripts/utils/ViewLoader.js"></script>
+        <script type="text/javascript" src="/Scripts/utils/Menu.js"></script>
+        <script type="text/javascript" src="/Scripts/utils/SiteRouter.js"></script>
+        <script type="text/javascript" src="/Scripts/utils/PageRouter.js"></script>
+        <script type="text/javascript" src="/Scripts/utils/TableFixer.js"></script>
+        <script type="text/javascript" src="/Scripts/utils/jquery.bootpag.js"></script>
+        <script type="text/javascript" src="/Scripts/utils/jqueryExtend.js"></script>
+        <script src="/Content/Markup/plugins/forms/validate/jquery.validate.min.js" type="text/javascript"></script>
+    
+        <script src="/Scripts/jquery.fileupload.js" type="text/javascript"></script>
+        <script src="/Scripts/jquery.fileupload-process.js" type="text/javascript"></script>
+        <script src="/Scripts/jquery.fileupload-validate.js" type="text/javascript"></script>
+        
+        <script src="/Scripts/Common/AjaxLoader.js" type="text/javascript"></script>
+        <script src="/Scripts/Common/ColorHelper.js" type="text/javascript"></script>
+        <script src="/Scripts/Common/DatePickerHelper.js" type="text/javascript"></script>
+        <script src="/Scripts/Common/JsHelpers.js" type="text/javascript"></script>
+        <script src="/Scripts/Common/PaginationHelper.js" type="text/javascript"></script>
+        <script src="/Scripts/Common/Popup.js" type="text/javascript"></script>
+        <script src="/Scripts/Common/PopupLoader.js" type="text/javascript"></script>
+        <script src="/Scripts/Common/Request.js" type="text/javascript"></script>
+        <script src="/Scripts/Common/TplGrid.js" type="text/javascript"></script>
+        <script src="/Scripts/Common/UploadHelper.js" type="text/javascript"></script>
+        <script src="/Scripts/Common/Validator.js" type="text/javascript"></script>
+        <script src="/Scripts/Common/bootstrap.colorpickersliders.js" type="text/javascript"></script>
+        <script src="/Scripts/Common/farbtastic.js" type="text/javascript"></script>
+        <script src="/Scripts/Common/highcharts.js" type="text/javascript"></script>
+        <script src="/Scripts/Common/jquery.cookie.js" type="text/javascript"></script>
+        <script src="/Scripts/Common/jquery.toastmessage.js" type="text/javascript"></script>
+        <script src="/Scripts/Common/FileUploadCustom.js" type="text/javascript"></script>
+        <script src="/Scripts/Common/moment-with-langs.js" type="text/javascript"></script>
+        <script src="/Scripts/Common/moment-with-langs.min.js" type="text/javascript"></script>
+        <script src="/Scripts/Common/moment.js" type="text/javascript"></script>
+        <script src="/Scripts/Common/moment.min.js" type="text/javascript"></script>
+        <script src="/Scripts/Common/tinycolor.js" type="text/javascript"></script>
+        <script src="/Scripts/Common/View.js" type="text/javascript"></script>
+        <script type="text/javascript" src="/Scripts/noty/jquery.noty.js"></script>
+        <script type="text/javascript" src="/Scripts/noty/settings.js"></script>
+        <script type="text/javascript" src="/Scripts/noty/layouts/top.js"></script>
+        <script type="text/javascript" src="/Scripts/noty/layouts/topLeft.js"></script>
+        <script type="text/javascript" src="/Scripts/noty/layouts/topRight.js"></script>
+        <script type="text/javascript" src="/Scripts/noty/themes/default.js"></script>
+        <script src="/Scripts/Utils/Spin.js" type="text/javascript"></script><style></style>
+        <script src="/Scripts/Utils/RequestLoader.js" type="text/javascript"></script>
+        <script src="/Scripts/Common/FileUploadCustom.js" type="text/javascript"></script>
+        <script src="/Scripts/utils/slick/slick.min.js" type="text/javascript"></script>
+        <script src="/Scripts/utils/timepicker/jquery.timepicker.js" type="text/javascript"></script>
+        <script src="/Scripts/utils/ckeditor/ckeditor.js"></script><style>.cke{visibility:hidden;}</style>
+        <script type="text/javascript" src="/Scripts/utils/bootstrap-star-rating-master/js/star-rating.js"></script>
+        <script type="text/javascript" src="/Scripts/utils/mCustomScrollbar/jquery.mCustomScrollbar.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.12/jquery.mousewheel.min.js"></script>
+        
+        <script src="/Scripts/utils/jQuery-File-Upload-9.10.5/js/jquery.iframe-transport.js"></script>
+        <script src="/Scripts/utils/jQuery-File-Upload-9.10.5/js/jquery.fileupload.js"></script>
+        <script src="/Scripts/utils/jQuery-File-Upload-9.10.5/js/jquery.fileupload-process.js"></script>
+        <script src="//blueimp.github.io/JavaScript-Load-Image/js/load-image.all.min.js"></script>
+        <script src="/Scripts/utils/jQuery-File-Upload-9.10.5/js/jquery.fileupload-image.js"></script>
+        <script src="/Scripts/utils/jQuery-File-Upload-9.10.5/js/jquery.fileupload-audio.js"></script>
+        <script src="/Scripts/utils/jQuery-File-Upload-9.10.5/js/jquery.fileupload-video.js"></script>
+        <script src="/Scripts/utils/jQuery-File-Upload-9.10.5/js/jquery.fileupload-validate.js"></script>
+        <script src="/Scripts/utils/jQuery-File-Upload-9.10.5/js/jquery.fileupload-ui.js"></script>
+        <script src="/Scripts/utils/alertify.js-0.3.11/src/alertify.js"></script>
+        <script src="/Scripts/utils/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+        <script src="/Scripts/utils/flipclock/compiled/flipclock.js"></script>
+        <script src="/Scripts/utils/jquery.countdown.js"></script>
+        <script src="/Scripts/jquery.signalR-2.2.0.js"></script>
+
+        <script src="/signalr/hubs"></script>
+        <script>requestLoader.init();</script>
+    </head>
+        
+<body>
+  <header>
+    <div class="container cf">
+      <a href="http://pmtoolprojectpassport.mgrwin.com/Project/List" class="logo">Project Management Tool</a>
+      <p class="welcome">
+        Hello, Test Project Manager
+        <a href="/Logout">Logout</a>
+      </p>
+    </div>
+  </header>
+  <nav class="">
+      <div class="container col-md-10 col-md-offset-1">
+      <nav class="navbar ">
+          <div class="container-fluid">
+              <div id="bs-example-navbar-collapse-1" class="collapse navbar-collapse">
+                  <ul class="nav navbar-nav main-navbar">
+                          <li class="dropdown">
+                              <a data-toggle="dropdown" href="#"><span class="menu-option-icon project-icon"></span>Project</a>
+                              <ul class="dropdown-menu">
+                                  <li>
+                                      <a href="http://pmtoolprojectpassport.mgrwin.com/">Project List</a>
+                                  </li>
+                              </ul>
+                          </li>
+                                                <li class="dropdown">
+                              <a data-toggle="dropdown" href="#"><span class="menu-option-icon finance-icon"></span>Finance</a>
+                              <ul class="dropdown-menu">
+                                      <li><a href="/Report/MonthlyPayments">Monthly Sales Report</a></li>
+
+                                      <li><a href="/Report/FinancePlan">Finance Plan</a></li>
+                                                                        <li><a href="/MonthPlan/PlanView">Sales Plan</a></li>
+                                                                        <li><a href="/Proposal/GetPlanning">Proposal Plan</a></li>
+                                                                        <li><a href="/Invoice/InvoiceList">Invoice List</a></li>
+                                                                    
+                              </ul>
+                          </li>
+                       <li class="dropdown">
+                              <a data-toggle="dropdown" href="#">Dashboard</a>
+                              <ul class="dropdown-menu">
+                                  <li><a href="/Dashboard/SpentTimeDashboard">Spent Time Dashboard</a></li>
+                              </ul>
+                          </li>
+                          <li class="dropdown">
+                              <a data-toggle="dropdown" href="#"><span class="menu-option-icon report-icon"></span>Report</a>
+                              <ul class="dropdown-menu">
+                                      <li><a href="/HoursMonitoring/TeamleadHoursMonitoring">Teamlead Hours Monitoring</a></li>
+                                  
+                                      <li><a href="/report/pmhours">PM load</a></li>
+                                                                        <li><a href="/report/devload">Developers load</a></li>
+                                                                        <li><a href="/Report/DeveloperDailySpentTimeReport">Developers spent hours</a></li>
+                                                                        <li><a href="/Report/SkillsLoadReportView">Forecast by technologies</a></li>
+                                                                        <li><a href="/Proposal/GetReport">Proposals report</a></li>
+                                                                        <li><a href="/Proposal/ProposalByTechnologyReport">Proposal By Technology Report</a></li>
+                                                                        <li><a href="/Report/FactTimesheetHoursReport">Fact/Timesheet Hours Report</a></li>
+                                                                        <li><a href="/Report/AllocationReport">Allocation Report</a></li>
+                                                                        <li class="item"><a href="/Report/UnpaidActivityView">Not billable hours</a></li>
+                                                                        <li class="item"><a href="/Report/KpiReport">KPI Report</a></li>
+                                                                        <li class="item"><a href="/Report/ClientFeedbackReport">Client Feedback</a></li>
+                              </ul>
+                          </li>
+                      
+                          <li onclick="window.location = '/HRSpace/Dashboard'">
+                              <a data-toggle="dropdown" href=""><span class="menu-name"> HR Space</span> </a>
+                          </li>
+                                                <li class="dropdown">
+                              <a data-toggle="dropdown" href="#">Estimation</a>
+                              <ul class="dropdown-menu">
+                                      <li><a href="/Estimation/SmRequestList">Estimation Requests</a></li>
+
+                                                                </ul>
+                          </li>
+
+                          <li class="dropdown">
+                              <a data-toggle="dropdown" href="#"><span class=""></span>PM Feedback</a>
+                              <ul class="dropdown-menu">
+                                      <li><a href="/PmFeedback/DevelopersList"><span class="menu-option-icon"></span>My Feedbacks</a></li>
+
+                                      <li><a href="/PmFeedback/SmList"><span class="menu-option-icon"></span>My Feedbacks</a></li>
+
+                                      <li><a href="/PmFeedback/TopList"><span class="menu-option-icon"></span>View Feedbacks</a></li>
+                              </ul>
+                          </li>
+
+
+                          <li><a href="/Resources/ResourceAllocation"><span class="menu-option-icon resource-icon"></span>Resource Allocation</a></li>
+
+                          <li class="dropdown">
+                              <a data-toggle="dropdown" href="#"><span class="menu-option-icon admin-icon"></span>Administration</a>
+                              <ul class="dropdown-menu">
+                                  <li><a href="/Administration/Index">Administration panel</a></li>
+                                  <li><a href="/rolemanagement">Role management</a></li>
+
+                              </ul>
+                          </li>
+                      
+
+                      <li class="dropdown">
+                          <a data-toggle="dropdown" href="#"><i class="fa fa-plane"></i><span> Vacation</span> </a>
+                          <ul class="dropdown-menu">
+                              <li><a href="/Vacation/Index">Calendar</a></li>
+                              <li><a href="/Vacation/VacationDashboard">Report</a></li>
+                          </ul>
+                      </li>
+                  </ul>
+                  
+              </div><!-- /.navbar-collapse -->
+          </div><!-- /.container-fluid -->
+      </nav>
+      </div>
+  </nav>
+    <main>
+        <div class="container font12 col-md-10 col-md-offset-1">
+            
+
+<div class="page-title without-btn cf">
+    <h2 class="project-name">Resource Allocation</h2>
+    <button onclick="SendToAll();" class="btn btn-simple btn-md btn-title-right">
+        <i class="fa fa-share-square-o"></i>
+        <span>Send Allocation</span>
+    </button>
+</div>
+<div style="margin-top:20px;margin-bottom: 20px;" class="notice">
+    <i class="notice-icon"></i>
+    If you can't find project, don't be nervous. Firstly check if this project exist in <strong>PMTool (NOT IN REDMINE)</strong>. If you can't find it in project list  <a href="/">here</a>, you should create it (if you have rights) or ask TOP Manager or GPM to create this project.
+</div>
+<ul class="accordion">
+        <li class="accordion_item closed">
+            <div onclick="OpenDepartment($(this).closest('.accordion_item').find('.acc-body'),'7', $(this));" class="accordion_ttl2 cf">
+                <span>.NET</span>
+                <i class="fa fa-chevron-right"></i>
+            </div>
+            <div class="accordion_body">
+                
+            </div>
+            <div class="acc-body"></div>
+        </li>
+        <li class="accordion_item closed">
+            <div onclick="OpenDepartment($(this).closest('.accordion_item').find('.acc-body'),'8', $(this));" class="accordion_ttl2 cf">
+                <span>PHP</span>
+                <i class="fa fa-chevron-right"></i>
+            </div>
+            <div class="accordion_body">
+                
+            </div>
+            <div class="acc-body"></div>
+        </li>
+        <li class="accordion_item closed">
+            <div onclick="OpenDepartment($(this).closest('.accordion_item').find('.acc-body'),'9', $(this));" class="accordion_ttl2 cf">
+                <span>Java</span>
+                <i class="fa fa-chevron-right"></i>
+            </div>
+            <div class="accordion_body">
+                
+            </div>
+            <div class="acc-body"></div>
+        </li>
+        <li class="accordion_item closed">
+            <div onclick="OpenDepartment($(this).closest('.accordion_item').find('.acc-body'),'10', $(this));" class="accordion_ttl2 cf">
+                <span>iOS</span>
+                <i class="fa fa-chevron-right"></i>
+            </div>
+            <div class="accordion_body">
+                
+            </div>
+            <div class="acc-body"></div>
+        </li>
+        <li class="accordion_item closed">
+            <div onclick="OpenDepartment($(this).closest('.accordion_item').find('.acc-body'),'11', $(this));" class="accordion_ttl2 cf">
+                <span>Android</span>
+                <i class="fa fa-chevron-right"></i>
+            </div>
+            <div class="accordion_body">
+                
+            </div>
+            <div class="acc-body"></div>
+        </li>
+        <li class="accordion_item">
+            <div onclick="OpenDepartment($(this).closest('.accordion_item').find('.acc-body'),'12', $(this));" class="accordion_ttl2 cf">
+                <span>QA</span>
+                <i class="fa fa-chevron-right"></i>
+            </div>
+            <div class="accordion_body">
+                
+            </div>
+            <div class="acc-body">
+
+<table class="alloc">
+    <thead>
+        <tr>
+            <th>Employee</th>
+            <th>01.03.2016 - 07.03.2016</th>
+            <th class="current_week">08.03.2016 - 14.03.2016</th>
+            <th>15.03.2016 - 21.03.2016</th>
+            <th>22.03.2016 - 28.03.2016</th>
+        </tr>
+    </thead>
+    <tbody>
+            <tr data-id="54" class="user-dep-all">
+                <td>
+                    <figure class="person_inline">
+                        <img style="width:50px; height: 50px;" src="http://www.gravatar.com/avatar/4bced81e2f2334824bd3f0dec7d028bc" />
+                        <figcaption>
+                            <span>Liubov</span> 
+                            <br />
+                            <strong>Nikashova</strong>
+                        </figcaption>
+                    </figure>
+                </td>
+                    <td class="">
+                        <div class="accordion_nested">
+                            <div class="accordion_nested_ttl cf">
+                                <div class="alloc_hours">
+                                    <i onclick="OpenUserAllocation($(this).closest('.accordion_nested').find('.user-hours'),'54', '-1')" class="fa fa-plus-square-o plus-toggle"></i>
+                                    <i onclick="$(this).closest('.accordion_nested').find('.user-hours').empty()" class="fa fa-minus-square-o plus-toggle"></i>
+                                    <span>Allocate Hours</span>
+                                </div>
+                                <div class="hours_num bg">
+                                    <strong>
+                                        <span id="hours_week_-1_user_54">0,00</span>
+                                        /40.00
+                                    </strong>h
+                                </div>
+                            </div>
+                            <div class="accordion_nested_body">
+                             
+                            </div>
+                            <div class="user-hours">
+
+                            </div>
+                            
+                            <div class="allocation-comment">
+                                <textarea disabled="disabled" placeholder="comment..." data-week="-1" class="form-control"></textarea>
+                            </div>
+                        </div>
+                        
+                    </td>
+                    <td class="current_week">
+                        <div class="accordion_nested">
+                            <div class="accordion_nested_ttl cf">
+                                <div class="alloc_hours">
+                                    <i onclick="OpenUserAllocation($(this).closest('.accordion_nested').find('.user-hours'),'54', '0')" class="fa fa-plus-square-o plus-toggle" style="display: none;"></i>
+                                    <i onclick="$(this).closest('.accordion_nested').find('.user-hours').empty()" class="fa fa-minus-square-o plus-toggle" style="display: inline;"></i>
+                                    <span>Allocate Hours</span>
+                                </div>
+                                <div class="hours_num bg">
+                                    <strong>
+                                        <span id="hours_week_0_user_54">0,00</span>
+                                        /40.00
+                                    </strong>h
+                                </div>
+                            </div>
+                            <div class="accordion_nested_body">
+                             
+                            </div>
+                            <div class="user-hours">
+
+<ul class="project-allocation-list">
+</ul>
+
+<div class="hours_act cf">
+    <div class="add_save_wr pull-left">
+        <div data-weekoffset="0" data-userid="54" class="project_list project-list-container" style="display: block;">
+
+<div class="project-list-inner-container">
+
+    <input type="text" class="filter-project-list" onkeyup="FilterProjectList($(this))" />
+    <ul>
+    
+            <li class="project-alloc hidden" data-pm="Alexander Zaytsev" data-id="8173">Booking Management (Chauffeur Company)</li>
+            <li class="project-alloc hidden" data-pm="Alexandra Ermolaeva" data-id="8174">JOOX web</li>
+            <li class="project-alloc hidden" data-pm=" " data-id="8175">Corporate web-based pricing calculator</li>
+            <li class="project-alloc hidden" data-pm=" " data-id="8176">Corporate web-based pricing calculator</li>
+            <li class="project-alloc hidden" data-pm=" " data-id="8177">Business Value Calculator</li>
+            <li class="project-alloc hidden" data-pm=" " data-id="8178"></li>
+            <li class="project-alloc hidden" data-pm=" " data-id="8179"></li>
+            <li class="project-alloc hidden" data-pm=" " data-id="8180">Take over development </li>
+            <li class="project-alloc hidden" data-pm="Alexandra Ermolaeva" data-id="8181">Test Sales</li>
+            <li class="project-alloc hidden" data-pm="Alexandra Ermolaeva" data-id="8182">PRESALE ESTIMATION</li>
+            <li class="project-alloc hidden" data-pm=" " data-id="8183"></li>
+            <li class="project-alloc hidden" data-pm=" " data-id="8184"></li>
+            <li class="project-alloc hidden" data-pm=" " data-id="8185"></li>
+            <li class="project-alloc hidden" data-pm=" " data-id="8186"></li>
+            <li class="project-alloc hidden" data-pm=" " data-id="8187"></li>
+            <li class="project-alloc hidden" data-pm=" " data-id="8188"></li>
+            <li class="project-alloc hidden" data-pm=" " data-id="8189"></li>
+            <li class="project-alloc hidden" data-pm=" " data-id="8190"></li>
+            <li class="project-alloc hidden" data-pm=" " data-id="8191"></li>
+            <li class="project-alloc hidden" data-pm=" " data-id="8192"></li>
+            <li class="project-alloc hidden" data-pm=" " data-id="8193"></li>
+            <li class="project-alloc hidden" data-pm=" " data-id="8194"></li>
+            <li class="project-alloc hidden" data-pm=" " data-id="8195"></li>
+            <li class="project-alloc hidden" data-pm="Konstantin Martynov" data-id="8203">[web] Bringson courier app</li>
+            <li class="project-alloc hidden" data-pm=" " data-id="8213">Post Game</li>
+            <li class="project-alloc hidden" data-pm="Alexey Belev" data-id="8215"></li>
+            <li class="project-alloc hidden" data-pm=" " data-id="8217"></li>
+            <li class="project-alloc hidden" data-pm="Elena Poluektova" data-id="8218"></li>
+            <li class="project-alloc hidden" data-pm="Elena Poluektova" data-id="8219">Postarboy</li>
+            <li class="project-alloc hidden" data-pm="Elena Poluektova" data-id="8220"></li>
+            <li class="project-alloc hidden" data-pm=" " data-id="8222"></li>
+            <li class="project-alloc hidden" data-pm="Elena Poluektova" data-id="8225">iDLE (Тех. простой)</li>
+            <li class="project-alloc hidden" data-pm="Elena Poluektova" data-id="8226"></li>
+            <li class="project-alloc hidden" data-pm="Elena Poluektova" data-id="8271"></li>
+            <li class="project-alloc" data-pm="Elena Poluektova" data-id="8289">INTERNAL ACTIVITY</li>
+            <li class="project-alloc hidden" data-pm="Elena Poluektova" data-id="8290"></li>
+            <li class="project-alloc hidden" data-pm=" " data-id="8291"></li>
+            <li class="project-alloc hidden" data-pm=" " data-id="8317"></li>
+            <li class="project-alloc hidden" data-pm=" " data-id="8318"></li>
+            <li class="project-alloc hidden" data-pm=" " data-id="8328"></li>
+            <li class="project-alloc hidden" data-pm=" " data-id="8331"></li>
+            <li class="project-alloc hidden" data-pm=" " data-id="8339"></li>
+            <li class="project-alloc hidden" data-pm=" " data-id="8348"></li>
+            <li class="project-alloc hidden" data-pm=" " data-id="8350"></li>
+            <li class="project-alloc hidden" data-pm=" " data-id="8351"></li>
+            <li class="project-alloc hidden" data-pm=" " data-id="8352"></li>
+            <li class="project-alloc hidden" data-pm=" " data-id="8353"></li>
+            <li class="project-alloc hidden" data-pm=" " data-id="8354"></li>
+            <li class="project-alloc hidden" data-pm=" " data-id="8355"></li>
+            <li class="project-alloc hidden" data-pm=" " data-id="8356"></li>
+            <li class="project-alloc hidden" data-pm=" " data-id="8357">PM Tool test</li>
+            <li class="project-alloc hidden" data-pm=" " data-id="8358"></li>
+            <li class="project-alloc hidden" data-pm=" " data-id="8359"></li>
+            <li class="project-alloc hidden" data-pm=" " data-id="8360"></li>
+    </ul>
+        
+</div>
+
+
+
+<script>
+    $('.project-alloc').on('click', function() {
+         
+        var that = $(this);
+        var container = that.closest('.project-list-container');
+        var template = $($("#HoursTemplate").html());
+        $(template).attr("data-id", $(that).attr("data-id"));
+        $('input', template).attr("onchange", "SaveAllocation(" + container.attr("data-weekOffset") + "," + container.attr("data-userId") + "," + $(that).attr("data-id") + "," + "$(this).val()" + "," + "$(this).closest('.user-project-allocation').find('textarea').val()" + ")");
+        $('textarea', template).attr("onchange", "SaveAllocation(" + container.attr("data-weekOffset") + "," + container.attr("data-userId") + "," + $(that).attr("data-id") + "," + "$(this).closest('.user-project-allocation').find('input').val()" + "," + "$(this).val()" + ")");
+        $('.repeat-button', template).attr("onclick", "RepeatAllocation(" + container.attr("data-userId") + "," + $(that).attr("data-id") + "," + "$(this).closest('.user-project-allocation').find('.hours-input').val()" + "," + container.attr("data-weekOffset") + ")");
+        $('.project_pm .name', template).text($(that).attr("data-pm"));
+        $('.project', template).text($(that).text());
+
+        that.closest('.user-hours').find('.project-allocation-list').append(template);
+    });
+    
+    function FilterProjectList(input) {
+         
+        $('.project-alloc').removeClass('hidden');
+        var text = input.val().trim();
+        if(text&amp;&amp;text!="")
+        {
+            var notContains = input.closest('.project-list-inner-container').find('.project-alloc').filter(function (i,element) {
+
+                var res = ($(element).text().toLowerCase().indexOf(text.toLowerCase()) == -1);
+                return res;
+            });
+             
+            $.each(notContains, function(i, el) {
+                $(el).addClass('hidden');
+            });
+        }
+    }
+    
+
+</script>
+</div>
+        <button title="Add Project" class="btn btn-simple btn-round add_project ">
+            <i class="fa fa-plus-circle"></i>
+        </button>
+            <button onclick="SendToDeveloper('54')" title="Send Allocation" class="btn btn-simple btn-round send_alloc">
+                <i class="fa fa-share-square-o"></i>
+            </button>
+    </div>
+</div>
+
+<script>
+    
+</script></div>
+                            
+                            <div class="allocation-comment">
+                                <textarea placeholder="comment..." data-week="0" class="form-control"></textarea>
+                            </div>
+                        </div>
+                        
+                    </td>
+                    <td class="">
+                        <div class="accordion_nested">
+                            <div class="accordion_nested_ttl cf">
+                                <div class="alloc_hours">
+                                    <i onclick="OpenUserAllocation($(this).closest('.accordion_nested').find('.user-hours'),'54', '1')" class="fa fa-plus-square-o plus-toggle"></i>
+                                    <i onclick="$(this).closest('.accordion_nested').find('.user-hours').empty()" class="fa fa-minus-square-o plus-toggle"></i>
+                                    <span>Allocate Hours</span>
+                                </div>
+                                <div class="hours_num bg">
+                                    <strong>
+                                        <span id="hours_week_1_user_54">0,00</span>
+                                        /40.00
+                                    </strong>h
+                                </div>
+                            </div>
+                            <div class="accordion_nested_body">
+                             
+                            </div>
+                            <div class="user-hours">
+
+                            </div>
+                            
+                            <div class="allocation-comment">
+                                <textarea disabled="disabled" placeholder="comment..." data-week="1" class="form-control"></textarea>
+                            </div>
+                        </div>
+                        
+                    </td>
+                    <td class="">
+                        <div class="accordion_nested">
+                            <div class="accordion_nested_ttl cf">
+                                <div class="alloc_hours">
+                                    <i onclick="OpenUserAllocation($(this).closest('.accordion_nested').find('.user-hours'),'54', '2')" class="fa fa-plus-square-o plus-toggle"></i>
+                                    <i onclick="$(this).closest('.accordion_nested').find('.user-hours').empty()" class="fa fa-minus-square-o plus-toggle"></i>
+                                    <span>Allocate Hours</span>
+                                </div>
+                                <div class="hours_num bg">
+                                    <strong>
+                                        <span id="hours_week_2_user_54">0,00</span>
+                                        /40.00
+                                    </strong>h
+                                </div>
+                            </div>
+                            <div class="accordion_nested_body">
+                             
+                            </div>
+                            <div class="user-hours">
+
+                            </div>
+                            
+                            <div class="allocation-comment">
+                                <textarea disabled="disabled" placeholder="comment..." data-week="2" class="form-control"></textarea>
+                            </div>
+                        </div>
+                        
+                    </td>
+            </tr>
+    </tbody>
+</table>
+
+<script>
+    $(".plus-toggle").on("click", function () {
+        $(this).parent().find(".plus-toggle").toggle();
+    });
+    
+    $('.user-hours').on('click', '.add_project', function () {
+         
+        var that = $(this);
+        var userId = that.closest('.user-dep-all').attr("data-id");
+        var projects = $(this).closest('.user-hours').find('.user-project-allocation');
+        var projectIds = [];
+        $.each(projects, function(i, el) {
+            projectIds.push($(el).attr('data-id'));
+        });
+
+        jQuery.ajaxSettings.traditional = true;
+        
+        request.page('/Resources', { projectIds: projectIds, userId: userId}, that.closest('.add_save_wr').find('.project_list'));
+        
+        $(this).closest('.add_save_wr').find('.project_list').show();
+    });
+
+    $('.allocation-comment textarea').on('change', function() {
+        var textarea = $(this);
+        request.post('/Resources/SaveAllocationComment', { UserId: textarea.closest('.user-dep-all').data('id'), WeekOffset: textarea.data("week"), Text: textarea.val() }, function() {
+            
+        });
+    });
+</script></div>
+        </li>
+        <li class="accordion_item closed">
+            <div onclick="OpenDepartment($(this).closest('.accordion_item').find('.acc-body'),'13', $(this));" class="accordion_ttl2 cf">
+                <span>Analytics</span>
+                <i class="fa fa-chevron-right"></i>
+            </div>
+            <div class="accordion_body">
+                
+            </div>
+            <div class="acc-body"></div>
+        </li>
+        <li class="accordion_item closed">
+            <div onclick="OpenDepartment($(this).closest('.accordion_item').find('.acc-body'),'14', $(this));" class="accordion_ttl2 cf">
+                <span>PM</span>
+                <i class="fa fa-chevron-right"></i>
+            </div>
+            <div class="accordion_body">
+                
+            </div>
+            <div class="acc-body"></div>
+        </li>
+        <li class="accordion_item closed">
+            <div onclick="OpenDepartment($(this).closest('.accordion_item').find('.acc-body'),'15', $(this));" class="accordion_ttl2 cf">
+                <span>Sales</span>
+                <i class="fa fa-chevron-right"></i>
+            </div>
+            <div class="accordion_body">
+                
+            </div>
+            <div class="acc-body"></div>
+        </li>
+        <li class="accordion_item closed">
+            <div onclick="OpenDepartment($(this).closest('.accordion_item').find('.acc-body'),'16', $(this));" class="accordion_ttl2 cf">
+                <span>Design</span>
+                <i class="fa fa-chevron-right"></i>
+            </div>
+            <div class="accordion_body">
+                
+            </div>
+            <div class="acc-body"></div>
+        </li>
+</ul>
+
+<div style="display: none;" id="HoursTemplate">
+    <li data-id="" class="cf user-project-allocation">
+        <div class="project_pm project-inline col-md-3">
+            <div class="project"></div>
+            <div class="name"></div>
+        </div>
+        <div class="project-allocation-comment col-md-6">
+            <textarea class="form-control"></textarea>
+        </div>
+        <div class="hours_num hours-inline col-md-2">
+            <input type="text" value="0" class="input_small hours-input" />
+        </div>
+        <div class="hours-inline col-md-1">
+            <button class="btn btn-simple btn-round repeat-button">
+                <img style="width: 15px" src="/Content/images/repeat.png" />
+            </button>
+        </div>
+        
+        
+        </li>
+</div>
+
+<script>
+    function SaveAllocation(weekOffset, userId, projectId, hours, comment) {
+        if (hours == "" || isNaN(hours) &amp;&amp; hours.trim() == "") {
+            hours = 0;
+        }
+        request.post('/Resources/Save', { userId: userId, projectId: projectId, weekOffset: weekOffset, hours: hours, comment: comment }, function(response) {
+            //DisplayMessage(response);
+            if(response.Data!=null)
+            $('#hours_week_' + weekOffset + '_user_' + userId).text(response.Data);
+        });
+    }
+    
+    function OpenDepartment(container, departmentId, that) {
+        if (that.closest('.accordion_item').hasClass('closed')) {
+            request.page('/Resources/DepartmentAllocation', { departmentId: departmentId }, container, function() {
+            });
+        } else {
+            container.empty();
+        }
+        that.closest('.accordion_item').toggleClass('closed');
+
+
+    }
+    
+    function OpenUserAllocation(container, userId, weekOffset) {
+        request.page('/Resources/UserAllocation', { userId: userId, weekOffset: weekOffset }, container, function() {
+        });
+    }
+
+    function SendToDeveloper(userId) {
+        request.post('/Resources/SendAllocationToUser', { userId: userId }, function(response) {
+            //DisplayMessage(response);
+        });
+    }
+
+    function SendToAll() {
+        request.post('/Resources/SendAllocationToAll', {}, function(response) {
+            //DisplayMessage(response);
+        });
+    }
+
+    function RepeatAllocation(userId, projectId, hours, weekOffset) {
+         
+        request.post('/Resources/Repeat', { userId: userId, projectId: projectId, hours: hours, weekOffset: weekOffset }, function(response) {
+            //DisplayMessage(response);
+            if (response.MessageType == 2) {
+                $('#hours_week_' + response.weekOffset + '_user_' + userId).text(response.Data);
+                var plus = $('#hours_week_' + response.weekOffset + '_user_' + userId).closest('.accordion_nested_ttl').find('.fa-plus-square-o');
+                plus.click();
+            }
+        });
+    }        
+
+</script>
+        </div>
+    </main>
+    
+    <div class="shadow"></div>
+
+<div class="popup-wrapper"></div>
+<div id="iframeContainer">
+
+</div>
+
+<div id="bootstrapModal" class="modal fade">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button aria-label="Close" data-dismiss="modal" class="close" type="button"><span aria-hidden="true">×</span></button>
+        <h4 class="modal-title">Modal title</h4>
+      </div>
+      <div class="modal-body">
+        <p>One fine body…</p>
+      </div>
+      <div class="modal-footer">
+        <button data-dismiss="modal" class="btn btn-default" type="button">Close</button>
+        <button class="btn btn-primary save-btn" type="button">Save changes</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+    
+
+
+
+<script src="/Scripts/scripts.js"></script>
+<script>
+    function DisplayMessage(response) {
+        if (response.MessageType == 2) {
+
+            alertify.success(response.Text);
+        } else
+            if (response.MessageType == 4) {
+                window.location.href = response.Text;
+            }
+            else if (response.MessageType == 1) {
+                alertify.error(response.Text);
+            }
+            else if (response.MessageType == 3) {
+                alertify.log(response.Text);
+           }
+    }
+
+    
+</script>
+<div id="requestLoaderContainer" style="position: fixed; top: 0px; left: 0px; bottom: 0px; right: 0px; z-index: 2000; display: none;"></div></body></html>

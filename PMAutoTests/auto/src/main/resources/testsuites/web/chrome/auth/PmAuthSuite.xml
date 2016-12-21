@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite  name="Suite:PmTool Authentication System" parallel="false">
+    <test name="Test: Check that authentication elements is displayed" verbose="1">
+        <classes>
+            <class name="pmtool.chrome.auth.AuthElementsTest"/>
+            <class name="pmtool.chrome.auth.InvalidCredentialsTest"/>
+            <class name="pmtool.chrome.auth.RoleBasedAuthTest"/>
+        </classes>
+    </test>
+</suite>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite  name="Suite:PmTool Allocate Resource" parallel="false">
+    <test name="Test: Allocate Resource" verbose="1">
+        <classes>
+            <!--<class name="pmtool.chrome.allocation.RenderAllocationTest"/>-->
+            <class name="pmtool.chrome.allocation.CreateAllocationTest"/>
+            <!--<class name="pmtool.database.projects.GetAllProjectsFromDataBaseTest"/>-->
+        </classes>
+    </test>
+</suite>

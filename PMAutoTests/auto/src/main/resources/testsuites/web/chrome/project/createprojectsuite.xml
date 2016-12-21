@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite  name="Suite:PmTool Create Project" parallel="false">
+    <test name="Test: Check that authentication elements is displayed" verbose="1">
+        <classes>
+            <!--<class name="pmtool.chrome.project.RenderCreateProjectFormTest"/>-->
+            <!--<class name="pmtool.chrome.project.CreateSampleProjectTest"/>-->
+            <!--<class name="pmtool.chrome.project.RenderEditProjectTest"/>-->
+            <!--<class name="pmtool.chrome.project.EditProjectTest"/>-->
+
+            <!--<class name="pmtool.chrome.project.DeleteProjectTest"/>
+
+            <class name="pmtool.database.projects.GetAllProjectsFromDataBaseTest"/>-->
+            <class name="pmtool.chrome.project.ProjectListFilterValidTest"/>
+            <!--<class name="pmtool.chrome.project.ProjectListFilterInvalidTest"/>-->
+
+        </classes>
+    </test>
+</suite>

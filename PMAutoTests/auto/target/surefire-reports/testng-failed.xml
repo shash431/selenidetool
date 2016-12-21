@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" verbose="0" name="Failed suite [Suite:PmTool Create Project]">
+  <test name="Test: Check that authentication elements is displayed">
+    <classes>
+      <class name="pmtool.chrome.project.ProjectListFilterValidTest"/>
+    </classes>
+  </test> <!-- Test: Check that authentication elements is displayed -->
+  <test name="Test: Check that authentication elements is displayed(failed)">
+    <classes>
+      <class name="pmtool.chrome.project.ProjectListFilterValidTest">
+        <methods>
+          <include name="filterValidProject" invocation-numbers="0 1 2 3"/>
+        </methods>
+      </class> <!-- pmtool.chrome.project.ProjectListFilterValidTest -->
+    </classes>
+  </test> <!-- Test: Check that authentication elements is displayed(failed) -->
+</suite> <!-- Failed suite [Suite:PmTool Create Project] -->

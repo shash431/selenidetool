@@ -1,0 +1,15 @@
+pmtool\chrome\project\ProjectListFilterInvalidTest.class
+pmtool\chrome\allocation\CreateAllocationTest.class
+pmtool\chrome\project\DeleteProjectTest.class
+pmtool\chrome\project\EditProjectTest.class
+pmtool\chrome\project\RenderCreateProjectFormTest.class
+pmtool\chrome\project\ProjectListFilterValidTest.class
+pmtool\database\projects\FilterProjectListTest.class
+pmtool\chrome\allocation\RenderAllocationTest.class
+pmtool\database\projects\GetAllProjectsFromDataBaseTest.class
+pmtool\chrome\project\RenderEditProjectTest.class
+pmtool\chrome\userGrid\RenderUserGridTest.class
+pmtool\chrome\auth\InvalidCredentialsTest.class
+pmtool\chrome\project\CreateSampleProjectTest.class
+pmtool\chrome\auth\RoleBasedAuthTest.class
+pmtool\chrome\auth\AuthElementsTest.class

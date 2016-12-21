@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head>
+        <meta charset="UTF-8" />
+        <title>Users</title>
+      <link href="/Content/css/reset.css" rel="stylesheet" />
+       <link type="text/css" rel="stylesheet" href="/Scripts/utils/bootstrap-3.3.2/css/bootstrap.css" />
+          <link href="/Content/css/clearfix.css" rel="stylesheet" />
+        
+        
+        <link type="text/css" rel="stylesheet" href="/Content/css/font-awesome.min.css" />
+        <link href="/Scripts/utils/bootstrap-star-rating-master/css/star-rating.css" type="text/css" rel="stylesheet" />
+        <link href="/Content/css/jquery-ui.structure.css" rel="stylesheet" />
+        <link href="/Content/css/jquery-ui.theme.css" rel="stylesheet" />
+        <link href="/Content/css/styles.css" rel="stylesheet" />
+        <link href="/Content/css/jquery.toastmessage.css" rel="stylesheet" />
+        <link href="/Content/css/bootstrap.colorpickersliders.css" rel="stylesheet" />
+        <link href="/Content/css/farbtastic.css" rel="stylesheet" />
+        <link href="/Scripts/utils/slick/slick.css" type="text/css" rel="stylesheet" />
+        <link href="/Scripts/utils/timepicker/jquery.timepicker.css" type="text/css" rel="stylesheet" />
+        <link href="/Scripts/utils/mCustomScrollbar/jquery.mCustomScrollbar.css" type="text/css" rel="stylesheet" />
+        <link href="//blueimp.github.io/Gallery/css/blueimp-gallery.min.css" rel="stylesheet" />
+        <!-- CSS to style the file input field as button and adjust the Bootstrap progress bars -->
+        <link href="/Scripts/utils/jQuery-File-Upload-9.10.5/css/jquery.fileupload.css" type="text/css" rel="stylesheet" />
+        <link href="/Scripts/utils/jQuery-File-Upload-9.10.5/css/jquery.fileupload-ui.css" type="text/css" rel="stylesheet" />
+        <link href="/Scripts/utils/alertify.js-0.3.11/themes/alertify.core.css" type="text/css" rel="stylesheet" />
+        <link href="/Scripts/utils/alertify.js-0.3.11/themes/alertify.bootstrap.css" type="text/css" rel="stylesheet" />
+        <link href="/Scripts/utils/bootstrap-datepicker/css/bootstrap-datepicker.css" type="text/css" rel="stylesheet" />
+        <link href="/Scripts/utils/flipclock/compiled/flipclock.css" type="text/css" rel="stylesheet" />
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" />
+        
+        
+        <script type="text/javascript" src="/Scripts/jquery-1.9.1.min.js"></script>
+        <script src="/Scripts/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="/Scripts/utils/bootstrap-3.3.2/js/bootstrap.js"></script>
+        <script type="text/javascript" src="/Scripts/backbone/underscore-min.js"></script>
+        <script type="text/javascript" src="/Scripts/backbone/backbone.js"></script>
+        <script type="text/javascript" src="/Scripts/utils/Ajax.js"></script>
+        <script type="text/javascript" src="/Scripts/utils/AjaxLoader.js"></script>
+        <script type="text/javascript" src="/Scripts/utils/PageLoader.js"></script>
+        <script type="text/javascript" src="/Scripts/utils/ViewLoader.js"></script>
+        <script type="text/javascript" src="/Scripts/utils/Menu.js"></script>
+        <script type="text/javascript" src="/Scripts/utils/SiteRouter.js"></script>
+        <script type="text/javascript" src="/Scripts/utils/PageRouter.js"></script>
+        <script type="text/javascript" src="/Scripts/utils/TableFixer.js"></script>
+        <script type="text/javascript" src="/Scripts/utils/jquery.bootpag.js"></script>
+        <script type="text/javascript" src="/Scripts/utils/jqueryExtend.js"></script>
+        <script src="/Content/Markup/plugins/forms/validate/jquery.validate.min.js" type="text/javascript"></script>
+    
+        <script src="/Scripts/jquery.fileupload.js" type="text/javascript"></script>
+        <script src="/Scripts/jquery.fileupload-process.js" type="text/javascript"></script>
+        <script src="/Scripts/jquery.fileupload-validate.js" type="text/javascript"></script>
+        
+        <script src="/Scripts/Common/AjaxLoader.js" type="text/javascript"></script>
+        <script src="/Scripts/Common/ColorHelper.js" type="text/javascript"></script>
+        <script src="/Scripts/Common/DatePickerHelper.js" type="text/javascript"></script>
+        <script src="/Scripts/Common/JsHelpers.js" type="text/javascript"></script>
+        <script src="/Scripts/Common/PaginationHelper.js" type="text/javascript"></script>
+        <script src="/Scripts/Common/Popup.js" type="text/javascript"></script>
+        <script src="/Scripts/Common/PopupLoader.js" type="text/javascript"></script>
+        <script src="/Scripts/Common/Request.js" type="text/javascript"></script>
+        <script src="/Scripts/Common/TplGrid.js" type="text/javascript"></script>
+        <script src="/Scripts/Common/UploadHelper.js" type="text/javascript"></script>
+        <script src="/Scripts/Common/Validator.js" type="text/javascript"></script>
+        <script src="/Scripts/Common/bootstrap.colorpickersliders.js" type="text/javascript"></script>
+        <script src="/Scripts/Common/farbtastic.js" type="text/javascript"></script>
+        <script src="/Scripts/Common/highcharts.js" type="text/javascript"></script>
+        <script src="/Scripts/Common/jquery.cookie.js" type="text/javascript"></script>
+        <script src="/Scripts/Common/jquery.toastmessage.js" type="text/javascript"></script>
+        <script src="/Scripts/Common/FileUploadCustom.js" type="text/javascript"></script>
+        <script src="/Scripts/Common/moment-with-langs.js" type="text/javascript"></script>
+        <script src="/Scripts/Common/moment-with-langs.min.js" type="text/javascript"></script>
+        <script src="/Scripts/Common/moment.js" type="text/javascript"></script>
+        <script src="/Scripts/Common/moment.min.js" type="text/javascript"></script>
+        <script src="/Scripts/Common/tinycolor.js" type="text/javascript"></script>
+        <script src="/Scripts/Common/View.js" type="text/javascript"></script>
+        <script type="text/javascript" src="/Scripts/noty/jquery.noty.js"></script>
+        <script type="text/javascript" src="/Scripts/noty/settings.js"></script>
+        <script type="text/javascript" src="/Scripts/noty/layouts/top.js"></script>
+        <script type="text/javascript" src="/Scripts/noty/layouts/topLeft.js"></script>
+        <script type="text/javascript" src="/Scripts/noty/layouts/topRight.js"></script>
+        <script type="text/javascript" src="/Scripts/noty/themes/default.js"></script>
+        <script src="/Scripts/Utils/Spin.js" type="text/javascript"></script><style></style>
+        <script src="/Scripts/Utils/RequestLoader.js" type="text/javascript"></script>
+        <script src="/Scripts/Common/FileUploadCustom.js" type="text/javascript"></script>
+        <script src="/Scripts/utils/slick/slick.min.js" type="text/javascript"></script>
+        <script src="/Scripts/utils/timepicker/jquery.timepicker.js" type="text/javascript"></script>
+        <script src="/Scripts/utils/ckeditor/ckeditor.js"></script><style>.cke{visibility:hidden;}</style>
+        <script type="text/javascript" src="/Scripts/utils/bootstrap-star-rating-master/js/star-rating.js"></script>
+        <script type="text/javascript" src="/Scripts/utils/mCustomScrollbar/jquery.mCustomScrollbar.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.12/jquery.mousewheel.min.js"></script>
+        
+        <script src="/Scripts/utils/jQuery-File-Upload-9.10.5/js/jquery.iframe-transport.js"></script>
+        <script src="/Scripts/utils/jQuery-File-Upload-9.10.5/js/jquery.fileupload.js"></script>
+        <script src="/Scripts/utils/jQuery-File-Upload-9.10.5/js/jquery.fileupload-process.js"></script>
+        <script src="//blueimp.github.io/JavaScript-Load-Image/js/load-image.all.min.js"></script>
+        <script src="/Scripts/utils/jQuery-File-Upload-9.10.5/js/jquery.fileupload-image.js"></script>
+        <script src="/Scripts/utils/jQuery-File-Upload-9.10.5/js/jquery.fileupload-audio.js"></script>
+        <script src="/Scripts/utils/jQuery-File-Upload-9.10.5/js/jquery.fileupload-video.js"></script>
+        <script src="/Scripts/utils/jQuery-File-Upload-9.10.5/js/jquery.fileupload-validate.js"></script>
+        <script src="/Scripts/utils/jQuery-File-Upload-9.10.5/js/jquery.fileupload-ui.js"></script>
+        <script src="/Scripts/utils/alertify.js-0.3.11/src/alertify.js"></script>
+        <script src="/Scripts/utils/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+        <script src="/Scripts/utils/flipclock/compiled/flipclock.js"></script>
+        <script src="/Scripts/utils/jquery.countdown.js"></script>
+        <script src="/Scripts/jquery.signalR-2.2.0.js"></script>
+
+        <script src="/signalr/hubs"></script>
+        <script>requestLoader.init();</script>
+    </head>
+        
+<body style="padding-right: 17px;" class="modal-open">
+  <header>
+    <div class="container cf">
+      <a href="http://pmtoolprojectpassport.mgrwin.com/Project/List" class="logo">Project Management Tool</a>
+      <p class="welcome">
+        Hello, Test Project Manager
+        <a href="/Logout">Logout</a>
+      </p>
+    </div>
+  </header>
+  <nav class="">
+      <div class="container col-md-10 col-md-offset-1">
+      <nav class="navbar ">
+          <div class="container-fluid">
+              <div id="bs-example-navbar-collapse-1" class="collapse navbar-collapse">
+                  <ul class="nav navbar-nav main-navbar">
+                          <li class="dropdown">
+                              <a data-toggle="dropdown" href="#"><span class="menu-option-icon project-icon"></span>Project</a>
+                              <ul class="dropdown-menu">
+                                  <li>
+                                      <a href="http://pmtoolprojectpassport.mgrwin.com/">Project List</a>
+                                  </li>
+                              </ul>
+                          </li>
+                                                <li class="dropdown">
+                              <a data-toggle="dropdown" href="#"><span class="menu-option-icon finance-icon"></span>Finance</a>
+                              <ul class="dropdown-menu">
+                                      <li><a href="/Report/MonthlyPayments">Monthly Sales Report</a></li>
+
+                                      <li><a href="/Report/FinancePlan">Finance Plan</a></li>
+                                                                        <li><a href="/MonthPlan/PlanView">Sales Plan</a></li>
+                                                                        <li><a href="/Proposal/GetPlanning">Proposal Plan</a></li>
+                                                                        <li><a href="/Invoice/InvoiceList">Invoice List</a></li>
+                                                                    
+                              </ul>
+                          </li>
+                       <li class="dropdown">
+                              <a data-toggle="dropdown" href="#">Dashboard</a>
+                              <ul class="dropdown-menu">
+                                  <li><a href="/Dashboard/SpentTimeDashboard">Spent Time Dashboard</a></li>
+                              </ul>
+                          </li>
+                          <li class="dropdown">
+                              <a data-toggle="dropdown" href="#"><span class="menu-option-icon report-icon"></span>Report</a>
+                              <ul class="dropdown-menu">
+                                      <li><a href="/HoursMonitoring/TeamleadHoursMonitoring">Teamlead Hours Monitoring</a></li>
+                                  
+                                      <li><a href="/report/pmhours">PM load</a></li>
+                                                                        <li><a href="/report/devload">Developers load</a></li>
+                                                                        <li><a href="/Report/DeveloperDailySpentTimeReport">Developers spent hours</a></li>
+                                                                        <li><a href="/Report/SkillsLoadReportView">Forecast by technologies</a></li>
+                                                                        <li><a href="/Proposal/GetReport">Proposals report</a></li>
+                                                                        <li><a href="/Proposal/ProposalByTechnologyReport">Proposal By Technology Report</a></li>
+                                                                        <li><a href="/Report/FactTimesheetHoursReport">Fact/Timesheet Hours Report</a></li>
+                                                                        <li><a href="/Report/AllocationReport">Allocation Report</a></li>
+                                                                        <li class="item"><a href="/Report/UnpaidActivityView">Not billable hours</a></li>
+                                                                        <li class="item"><a href="/Report/KpiReport">KPI Report</a></li>
+                                                                        <li class="item"><a href="/Report/ClientFeedbackReport">Client Feedback</a></li>
+                              </ul>
+                          </li>
+                      
+                          <li onclick="window.location = '/HRSpace/Dashboard'">
+                              <a data-toggle="dropdown" href=""><span class="menu-name"> HR Space</span> </a>
+                          </li>
+                                                <li class="dropdown">
+                              <a data-toggle="dropdown" href="#">Estimation</a>
+                              <ul class="dropdown-menu">
+                                      <li><a href="/Estimation/SmRequestList">Estimation Requests</a></li>
+
+                                                                </ul>
+                          </li>
+
+                          <li class="dropdown">
+                              <a data-toggle="dropdown" href="#"><span class=""></span>PM Feedback</a>
+                              <ul class="dropdown-menu">
+                                      <li><a href="/PmFeedback/DevelopersList"><span class="menu-option-icon"></span>My Feedbacks</a></li>
+
+                                      <li><a href="/PmFeedback/SmList"><span class="menu-option-icon"></span>My Feedbacks</a></li>
+
+                                      <li><a href="/PmFeedback/TopList"><span class="menu-option-icon"></span>View Feedbacks</a></li>
+                              </ul>
+                          </li>
+
+
+                          <li><a href="/Resources/ResourceAllocation"><span class="menu-option-icon resource-icon"></span>Resource Allocation</a></li>
+
+                          <li class="dropdown">
+                              <a data-toggle="dropdown" href="#"><span class="menu-option-icon admin-icon"></span>Administration</a>
+                              <ul class="dropdown-menu">
+                                  <li><a href="/Administration/Index">Administration panel</a></li>
+                                  <li><a href="/rolemanagement">Role management</a></li>
+
+                              </ul>
+                          </li>
+                      
+
+                      <li class="dropdown">
+                          <a data-toggle="dropdown" href="#"><i class="fa fa-plane"></i><span> Vacation</span> </a>
+                          <ul class="dropdown-menu">
+                              <li><a href="/Vacation/Index">Calendar</a></li>
+                              <li><a href="/Vacation/VacationDashboard">Report</a></li>
+                          </ul>
+                      </li>
+                  </ul>
+                  
+              </div><!-- /.navbar-collapse -->
+          </div><!-- /.container-fluid -->
+      </nav>
+      </div>
+  </nav>
+    <main>
+        <div class="container font12 col-md-10 col-md-offset-1">
+            
+
+<style>
+    .pagingLeft select {
+        float: none;
+    }
+    .pagingLeft label {
+        float: none;
+        display: inline-block;
+    }
+    .colorsquare {
+        border: 2px solid #e2e2e2;
+        border-radius: 5px;
+        margin: auto;
+        width: 30px;
+        height: 30px;
+    }
+</style>
+
+<div class="page-title">
+    <h2>User Management</h2>
+</div>
+
+<div class="users-grid table" id="UserGridContainer">
+
+
+
+<link rel="stylesheet" href="/Content/css/Grid/GenericGrid.css" />
+ 
+
+
+<style>
+    /*.generic-grid input[type=text],
+    .generic-grid input[type=number] {
+        font-size: 11px;
+        width: 58px;
+    }*/
+
+    .generic-grid th input[type=text]:not(.hasDatepicker),
+    .generic-grid th input[type=number]:not(.hasDatepicker) {
+        width: 100%;
+    }
+</style>
+
+<div class="generic-grid">
+        <table class="web-app-generic-grid table">
+        <thead>
+            
+            <tr>
+                                        <th onclick="tplGrids['UserAdministrationModel'].Sort('1', this) " style="cursor: pointer;" data-sort="Id" class="UserAdministrationModel_theader" sub="genericGridHead">Id</th>
+                        <th onclick="tplGrids['UserAdministrationModel'].Sort('1', this) " style="cursor: pointer;" data-sort="FullName" class="UserAdministrationModel_theader" sub="genericGridHead">Name</th>
+                        <th onclick="tplGrids['UserAdministrationModel'].Sort('1', this) " style="cursor: pointer;" data-sort="GroupPlain" class="UserAdministrationModel_theader" sub="genericGridHead">User Groups</th>
+                        <th onclick="tplGrids['UserAdministrationModel'].Sort('1', this) " style="cursor: pointer;" data-sort="SkillsPlain" class="UserAdministrationModel_theader" sub="genericGridHead">User Skills</th>
+                        <th onclick="tplGrids['UserAdministrationModel'].Sort('1', this) " style="cursor: pointer;" data-sort="Department" class="UserAdministrationModel_theader" sub="genericGridHead">Department</th>
+                        <th onclick="tplGrids['UserAdministrationModel'].Sort('1', this) " style="cursor: pointer;" data-sort="BillableType" class="UserAdministrationModel_theader" sub="genericGridHead">Billable Type</th>
+                        <th onclick="tplGrids['UserAdministrationModel'].Sort('1', this) " style="cursor: pointer;" data-sort="HourlyRate" class="UserAdministrationModel_theader" sub="genericGridHead">Hourly Rate</th>
+                        <th onclick="tplGrids['UserAdministrationModel'].Sort('1', this) " style="cursor: pointer;" data-sort="IsActive" class="UserAdministrationModel_theader" sub="genericGridHead">Is Active</th>
+                                    <th style="text-align: center;" sub="genericGridHead"> </th>
+            </tr>
+                <tr>
+                                                    <th>
+                                    <input type="number" data-sort="Id" placeholder="filter value" data-type="int" class="UserAdministrationModel_theaderFilter input-small" id="tb_IdUserAdministrationModel" /></th>
+                                <th>
+                                    <input type="text" data-sort="FullName" placeholder="filter value" class="UserAdministrationModel_theaderFilter input-small" /></th>
+                                <th>
+                                    <input type="text" data-sort="GroupPlain" placeholder="filter value" class="UserAdministrationModel_theaderFilter input-small" /></th>
+                                <th>
+                                    <input type="text" data-sort="SkillsPlain" placeholder="filter value" class="UserAdministrationModel_theaderFilter input-small" /></th>
+                                <th>
+                                    <input type="text" data-sort="Department" placeholder="filter value" class="UserAdministrationModel_theaderFilter input-small" /></th>
+                                <th>
+                                    <input type="text" data-sort="BillableType" placeholder="filter value" class="UserAdministrationModel_theaderFilter input-small" /></th>
+                                <th>
+                                    <input type="number" data-sort="HourlyRate" placeholder="filter value" data-type="float" class="UserAdministrationModel_theaderFilter input-small" id="tb_HourlyRateUserAdministrationModel" /></th>
+                                <th>
+                                    <select data-sort="IsActive" class="UserAdministrationModel_theaderFilter input-small">
+                                        <option value="">--</option>
+                                        <option value="true">True</option>
+                                        <option value="false">False</option>
+                                    </select>
+                                </th>
+
+                    
+                        <th>
+                            <div class="ggfilters">
+                                <button onclick='tplGrids["UserAdministrationModel"].FilterChange(1,tplGrids["UserAdministrationModel"].GetDirection(),tplGrids["UserAdministrationModel"].view.filterId.sortcolumnId);' id="UserAdministrationModel_btnApplyAllFilters" class="btn" type="button">Apply</button>
+                                <button onclick="tplGrids['UserAdministrationModel'].ClearFilters();" id="UserAdministrationModel_btnClearAllFilters" class="btn" type="button">Clear</button>
+                            </div>
+                        </th>
+
+                </tr>
+
+        </thead>
+
+        <style type="text/css">
+            .generic-grid tr:hover td {
+                background: #D6ECFF!important;
+            }
+        </style>
+
+
+        <tbody>
+                <tr>
+
+                        <td style=" cursor:pointer" onclick="EditUser('114')">
+
+114
+                        </td>
+                        <td style=" cursor:pointer" onclick="EditUser('114')">
+
+Konstantin Martynov
+                        </td>
+                        <td style=" cursor:pointer" onclick="EditUser('114')">
+
+OTHER, SALES MANAGERS, TEAM LEAD, FinanceController, Accountant, FINANCE MANAGERS, TOP MANAGERS, PROJECT MANAGERS, GENERAL PROJECT MANAGER, Admins, Chief Marketing Officer
+                        </td>
+                        <td style=" cursor:pointer" onclick="EditUser('114')">
+
+.NET
+                        </td>
+                        <td style=" cursor:pointer" onclick="EditUser('114')">
+
+.NET
+                        </td>
+                        <td style=" cursor:pointer" onclick="EditUser('114')">
+
+Billable
+                        </td>
+                        <td style=" cursor:pointer" onclick="EditUser('114')">
+
+5,0
+                        </td>
+                        <td style=" cursor:pointer" onclick="EditUser('114')">
+
+<input type="checkbox" checked="checked" data-userid="114" onclick="event.stopPropagation(); DismissUser(114,$(this))" />
+                        </td>
+                                                <td style="cursor:pointer"></td>
+                </tr>
+        </tbody>
+    </table>
+
+</div>
+
+<div class="item-per-p">
+    <div class="pagingLeft">
+
+        <label style="margin: 4px 10px 0 0;">ItemsAtPage</label>
+        <select onchange="tplGrids['UserAdministrationModel'].FilterChange(1, 'desc', '')" class="input-small" id="UserAdministrationModel_tbItemsPerPage">
+                <option value="10">10</option>
+                <option value="50">50</option>
+                <option value="100">100</option>
+                <option value="2147483647">All</option>
+        </select>
+        <div class="wrapPaginator clearfix"></div>
+            <script data-id="tblSwimLanes" type="text/javascript" id="t635941597871508915">
+
+        var pArr = pArr || {};//new Array();
+        $(function(){ 
+        
+            pArr['UserGridContainer']= new PaginationHelper();
+
+       console.log(pArr['UserGridContainer']);
+          
+        pArr['UserGridContainer'].Container = 'UserGridContainer';
+        pArr['UserGridContainer'].TotalPages = 1;
+        pArr['UserGridContainer'].ActionURL = '/Administration/GetUsersGrid?Container=UserGridContainer';
+        pArr['UserGridContainer'].AddResultToItself = false;
+        pArr['UserGridContainer'].CurrentPage = 1;
+        pArr['UserGridContainer'].InputTextID = 'UserGridContainer_mgrtbPageNumber';
+
+        pArr['UserGridContainer'].SortColumn = '';
+        pArr['UserGridContainer'].Direction = 'desc';
+        pArr['UserGridContainer'].Filters = '[{"ColumnName":"FullName","FilterValue":"martynov"}]';
+        pArr['UserGridContainer'].ItemsPerPage = '10';
+        pArr['UserGridContainer'].EntityName = 'UserAdministrationModel';
+
+        pArr['UserGridContainer'].init();
+   });
+    
+
+    </script>
+<link href="/Content/css/Pager/pager.css" type="text/css" rel="stylesheet" />
+
+    </div>
+    <div class="clr"></div>
+</div>
+<div class="clr"></div>
+
+<div style="display: none" id="UserAdministrationModel_DeletePopup">
+
+</div>
+
+<script type="text/javascript">
+    // 
+    var tplGrids=tplGrids || {};
+    var cbfsArr = cbfsArr || {};
+ 
+    $(document).ready(function() {
+
+      
+        $("#" + 'UserAdministrationModel' + "_tbItemsPerPage").val(10);
+
+        var firstVal = $("#" + 'UserAdministrationModel' + "_tbItemsPerPage").children().first().val();
+        var selectedVal = $("#" + 'UserAdministrationModel' + "_tbItemsPerPage option:selected").val();
+        
+        if (selectedVal === undefined) {
+            $("#" + 'UserAdministrationModel' + "_tbItemsPerPage").val(firstVal);
+        }
+        
+        tplGrids['UserAdministrationModel'] = new TplGrid(
+            {
+                url: {
+                    actionUrl: '/Administration/GetUsersGrid?Container=UserGridContainer',
+                    imageUp: 'icon-arrow-up',
+                    imageDown: 'icon-arrow-down',
+                    directImageUrl: 'icon-arrow-down'
+                },
+                container:
+                {
+                    gridContainer: 'UserGridContainer',
+                    entityName:'UserAdministrationModel',
+                    IsSlider:false,
+                    IsFilterFromCookie:'false'
+                },
+                filterId: {
+                    sortcolumnId: '',
+                    filters: JSON.parse('[{"ColumnName":"FullName","FilterValue":"martynov"}]')
+                }
+            }
+        );
+        
+        if ('10' !=$("#" + 'UserAdministrationModel' + "_tbItemsPerPage").val()) {tplGrids['UserAdministrationModel'].ClearFilters(); }
+         
+       
+        //ComboBox Init
+        var cbfs = $(".UserAdministrationModel_cbftheaderFilter");
+        
+      
+        //    
+        //}
+        
+        
+        //cbfs.multiselect({
+        //    noneSelectedText: 'Select value(s)',
+        //    selectedText: 'Select value(s): &lt;b&gt;# selected&lt;/b&gt;',
+        //    height: 'auto',
+        //    click: function (event, ui) {
+        //        var cb = $($(event)[0].target);
+        //        var idx = cb.attr('data-sort');
+        //        console.log(idx);
+        //        cbfsArr[idx]=cb.multiselect("getChecked").map(function () {
+        //            return  this.value;
+        //        }).get();
+                
+        //        /*array_of_checked_values = $("#slGroups").multiselect("getChecked").map(function () {
+        //            return { ID: this.value };
+        //        }).get();
+        //        */
+        //        //console.log(array_of_checked_values);
+        //        console.log(cbfsArr[idx]);
+        //    },
+        //    checkAll: function (event, ui) {
+                
+        //        var cb = $($(event)[0].target);
+        //        var idx = cb.attr('data-sort');
+        //        cbfsArr[idx]=cb.multiselect("getChecked").map(function () {
+        //            return  this.value ;
+        //        }).get();
+                
+        //        //array_of_checked_values = $("#slGroups").multiselect("getChecked").map(function () {
+        //        //    return { ID: this.value };
+        //        //}).get();
+
+        //        console.log(cbfsArr[idx]);
+        //    },
+        //    uncheckAll: function (event, ui) {
+                
+        //        var cb = $($(event)[0].target);
+        //        var idx = cb.attr('data-sort');
+        //        cbfsArr[idx]=cb.multiselect("getChecked").map(function () {
+        //            return { ID: this.value };
+        //        }).get();
+                
+        //        console.log(cbfsArr[idx]);
+        //        //array_of_checked_values = $("#slGroups").multiselect("getChecked").map(function () {
+        //        //    return { ID: this.value };
+        //        //}).get();
+        //        //console.log(array_of_checked_values);
+        //    }
+        //});
+
+    });
+   
+</script>
+</div>
+
+<script src="/Scripts/Views/Administration/UsersGridView.js"></script>
+
+<script>
+    $(function() {
+        var filterModel = JSON.parse($.cookie("filter") || JSON.stringify(""));
+
+        usersGridView.Init({
+            urls: {
+                gridUrl: '/Administration/UsersGrid'
+            },
+            elements: {
+                Id: "input[data-sort=Id]",
+                BillableType: "input[data-sort=BillableType]",
+                LName: "input[data-sort=LName]",
+                Department: "input[data-sort=Department]",
+                IsActive: "input[data-sort=IsActive]",
+                filterContainer: $(".generic-grid thead tr:nth-child(2)"),
+                container: $("#UserGridContainer")
+            },
+            data: {
+                filter: filterModel
+            }
+
+        });
+    });
+    
+</script>
+        </div>
+    </main>
+    
+    <div class="shadow"></div>
+
+<div class="popup-wrapper"></div>
+<div id="iframeContainer">
+
+</div>
+
+<div id="bootstrapModal" class="modal fade in" style="display: block;">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button aria-label="Close" data-dismiss="modal" class="close" type="button"><span aria-hidden="true">×</span></button>
+        <h4 class="modal-title">Edit User</h4>
+      </div>
+      <div class="modal-body">
+
+<div class="edit-user" id="editUserContainer">
+    <form style="margin-bottom: 0;" id="editUserForm" novalidate="novalidate">
+        
+        <input type="hidden" value="114" name="Id" id="Id" data-val-required="Требуется поле Id." data-val-number="The field Id must be a number." data-val="true" />
+        <div class="form-group">
+            <label>Name</label>
+            <div>Konstantin Martynov</div>
+        </div>
+        <div class="form-group">
+            <label>User Groups</label>
+            <div id="userGroupsContainer">
+<div class="row selected-group">
+    <div class="col-md-10">
+        <div class="form-group">
+            <input type="hidden" value="6" name="SelectedUserGroups" />
+            <span>OTHER</span>
+        </div>
+    </div>
+    <div class="col-md-2 text-right">
+        <button onclick="$(this).closest('.selected-group').fadeOut('fast', function(){$(this).remove(); userEditView.UpdateAvailableUserGroups();});return false;" class="btn btn-danger"><i class="fa fa-times"></i></button>
+    </div>
+</div><div class="row selected-group">
+    <div class="col-md-10">
+        <div class="form-group">
+            <input type="hidden" value="2" name="SelectedUserGroups" />
+            <span>SALES MANAGERS</span>
+        </div>
+    </div>
+    <div class="col-md-2 text-right">
+        <button onclick="$(this).closest('.selected-group').fadeOut('fast', function(){$(this).remove(); userEditView.UpdateAvailableUserGroups();});return false;" class="btn btn-danger"><i class="fa fa-times"></i></button>
+    </div>
+</div><div class="row selected-group">
+    <div class="col-md-10">
+        <div class="form-group">
+            <input type="hidden" value="13" name="SelectedUserGroups" />
+            <span>TEAM LEAD</span>
+        </div>
+    </div>
+    <div class="col-md-2 text-right">
+        <button onclick="$(this).closest('.selected-group').fadeOut('fast', function(){$(this).remove(); userEditView.UpdateAvailableUserGroups();});return false;" class="btn btn-danger"><i class="fa fa-times"></i></button>
+    </div>
+</div><div class="row selected-group">
+    <div class="col-md-10">
+        <div class="form-group">
+            <input type="hidden" value="17" name="SelectedUserGroups" />
+            <span>FinanceController</span>
+        </div>
+    </div>
+    <div class="col-md-2 text-right">
+        <button onclick="$(this).closest('.selected-group').fadeOut('fast', function(){$(this).remove(); userEditView.UpdateAvailableUserGroups();});return false;" class="btn btn-danger"><i class="fa fa-times"></i></button>
+    </div>
+</div><div class="row selected-group">
+    <div class="col-md-10">
+        <div class="form-group">
+            <input type="hidden" value="16" name="SelectedUserGroups" />
+            <span>Accountant</span>
+        </div>
+    </div>
+    <div class="col-md-2 text-right">
+        <button onclick="$(this).closest('.selected-group').fadeOut('fast', function(){$(this).remove(); userEditView.UpdateAvailableUserGroups();});return false;" class="btn btn-danger"><i class="fa fa-times"></i></button>
+    </div>
+</div><div class="row selected-group">
+    <div class="col-md-10">
+        <div class="form-group">
+            <input type="hidden" value="3" name="SelectedUserGroups" />
+            <span>FINANCE MANAGERS</span>
+        </div>
+    </div>
+    <div class="col-md-2 text-right">
+        <button onclick="$(this).closest('.selected-group').fadeOut('fast', function(){$(this).remove(); userEditView.UpdateAvailableUserGroups();});return false;" class="btn btn-danger"><i class="fa fa-times"></i></button>
+    </div>
+</div><div class="row selected-group">
+    <div class="col-md-10">
+        <div class="form-group">
+            <input type="hidden" value="1" name="SelectedUserGroups" />
+            <span>TOP MANAGERS</span>
+        </div>
+    </div>
+    <div class="col-md-2 text-right">
+        <button onclick="$(this).closest('.selected-group').fadeOut('fast', function(){$(this).remove(); userEditView.UpdateAvailableUserGroups();});return false;" class="btn btn-danger"><i class="fa fa-times"></i></button>
+    </div>
+</div><div class="row selected-group">
+    <div class="col-md-10">
+        <div class="form-group">
+            <input type="hidden" value="4" name="SelectedUserGroups" />
+            <span>PROJECT MANAGERS</span>
+        </div>
+    </div>
+    <div class="col-md-2 text-right">
+        <button onclick="$(this).closest('.selected-group').fadeOut('fast', function(){$(this).remove(); userEditView.UpdateAvailableUserGroups();});return false;" class="btn btn-danger"><i class="fa fa-times"></i></button>
+    </div>
+</div><div class="row selected-group">
+    <div class="col-md-10">
+        <div class="form-group">
+            <input type="hidden" value="5" name="SelectedUserGroups" />
+            <span>GENERAL PROJECT MANAGER</span>
+        </div>
+    </div>
+    <div class="col-md-2 text-right">
+        <button onclick="$(this).closest('.selected-group').fadeOut('fast', function(){$(this).remove(); userEditView.UpdateAvailableUserGroups();});return false;" class="btn btn-danger"><i class="fa fa-times"></i></button>
+    </div>
+</div><div class="row selected-group">
+    <div class="col-md-10">
+        <div class="form-group">
+            <input type="hidden" value="15" name="SelectedUserGroups" />
+            <span>Admins</span>
+        </div>
+    </div>
+    <div class="col-md-2 text-right">
+        <button onclick="$(this).closest('.selected-group').fadeOut('fast', function(){$(this).remove(); userEditView.UpdateAvailableUserGroups();});return false;" class="btn btn-danger"><i class="fa fa-times"></i></button>
+    </div>
+</div><div class="row selected-group">
+    <div class="col-md-10">
+        <div class="form-group">
+            <input type="hidden" value="12" name="SelectedUserGroups" />
+            <span>Chief Marketing Officer</span>
+        </div>
+    </div>
+    <div class="col-md-2 text-right">
+        <button onclick="$(this).closest('.selected-group').fadeOut('fast', function(){$(this).remove(); userEditView.UpdateAvailableUserGroups();});return false;" class="btn btn-danger"><i class="fa fa-times"></i></button>
+    </div>
+</div>            </div>
+            <select name="AvailableGroups" id="AvailableGroups" class="form-control"><option value="">Please select group</option>
+<option value="1" style="display: none;">TOP MANAGERS</option>
+<option value="2" style="display: none;">SALES MANAGERS</option>
+<option value="3" style="display: none;">FINANCE MANAGERS</option>
+<option value="4" style="display: none;">PROJECT MANAGERS</option>
+<option value="5" style="display: none;">GENERAL PROJECT MANAGER</option>
+<option value="6" style="display: none;">OTHER</option>
+<option value="7">EMPLOYEES</option>
+<option value="8">OVERLOOKER</option>
+<option value="10">Chief Technical Officer</option>
+<option value="11">PROJECT LEAD</option>
+<option value="12" style="display: none;">Chief Marketing Officer</option>
+<option value="13" style="display: none;">TEAM LEAD</option>
+<option value="14">HR</option>
+<option value="15" style="display: none;">Admins</option>
+<option value="16" style="display: none;">Accountant</option>
+<option value="17" style="display: none;">FinanceController</option>
+</select>
+        </div>
+        <div class="form-group">
+            <label>User Skills</label>
+            <div id="userSkillsContainer">
+<div class="row selected-skill">
+    <div class="col-md-10">
+        <div class="form-group">
+            <input type="hidden" value="5" name="SelectedUserSkills" />
+            <span>.NET</span>
+        </div>
+    </div>
+    <div class="col-md-2 text-right">
+        <button onclick="$(this).closest('.selected-skill').fadeOut('fast', function(){$(this).remove(); userEditView.UpdateAvailableUserSkills();});return false;" class="btn btn-danger"><i class="fa fa-times"></i></button>
+    </div>
+</div>            </div>
+            <select name="AvailableSkills" id="AvailableSkills" class="form-control"><option value="">Please select skill</option>
+<option value="1">Design</option>
+<option value="2">HTML/CSS</option>
+<option value="3">JS</option>
+<option value="5" style="display: none;">.NET</option>
+<option value="6">Android</option>
+<option value="7">iOS</option>
+<option value="8">Java</option>
+<option value="9">QA</option>
+<option value="11">Desktop</option>
+<option value="1011">PHP</option>
+</select>
+        </div>
+
+        <div class="form-group">
+            <label>Department</label>
+            <select name="DepartmentId" id="DepartmentId" data-val-number="The field DepartmentId must be a number." data-val="true" class="form-control"><option value="">Please select department</option>
+<option value="7" selected="selected">.NET</option>
+<option value="8">PHP</option>
+<option value="9">Java</option>
+<option value="10">iOS</option>
+<option value="11">Android</option>
+<option value="12">QA</option>
+<option value="13">Analytics</option>
+<option value="14">PM</option>
+<option value="15">Sales</option>
+<option value="16">Design</option>
+</select>
+        </div>
+        
+        <div class="form-group">
+            <label>Office</label>
+            <select name="OfficeId" id="OfficeId" data-val-number="The field OfficeId must be a number." data-val="true" class="form-control"><option value="">Please select office</option>
+<option value="2000">Saint Petersburg</option>
+<option value="2001">Academgorodok</option>
+<option value="2002">Novosibirsk</option>
+</select>
+        </div>
+
+        <div class="form-group">
+            <label>Hired Date:</label>
+            <input type="text" value="09.12.2015 4:38:01" name="HiredDate" id="HiredDate" data-val-date="The field HiredDate must be a date." data-val="true" class="form-control" />
+     
+            <label>Dismissed Date:</label>
+            <input type="text" value="" name="DismissedDate" id="DismissedDate" data-val-date="The field DismissedDate must be a date." data-val="true" class="form-control" />
+        </div>          
+
+        <div class="form-group">
+            <label>Level</label>
+            <select name="UserLevelTypeId" id="UserLevelTypeId" data-val-number="The field UserLevelTypeId must be a number." data-val="true" class="form-control"><option value="">Please select user level type</option>
+<option value="43">Junior</option>
+<option value="44">Standart</option>
+<option value="45">Senior</option>
+</select>
+        </div>
+
+        <div class="form-group">
+            <label>Billable Type</label>
+            <select name="BillableTypeId" id="BillableTypeId" data-val-required="Требуется поле BillableTypeId." data-val-number="The field BillableTypeId must be a number." data-val="true" class="form-control"><option value="">Please select billable type</option>
+<option value="19" selected="selected">Billable</option>
+<option value="20">Not Billable</option>
+</select>
+        </div>
+
+        <div class="form-group">
+            <label>Hourly Rate</label>
+            <input type="text" value="5,0" name="HourlyRate" id="HourlyRate" data-val-required="Требуется поле HourlyRate." data-val-number="The field HourlyRate must be a number." data-val="true" class="form-control" />
+        </div>
+
+        
+
+        
+
+    </form>
+</div>
+
+
+
+<script src="/Scripts/Views/Administration/UserEditView.js"></script>
+<script>
+    userEditView.Init({
+        urls: {
+            saveUrl: '/Administration/EditUserClick',
+            reloadUrl: '/Administration/UsersGrid',
+            addGroupUrl: '/Administration/AddUserGroup',
+            addSkillUrl: '/Administration/AddUserSkill'
+        },
+        elements: {
+            form: $("#editUserForm"),
+            container: $("#UserGridContainer"),
+            availableGroups: $("#AvailableGroups"),
+            availableSkills: $("#AvailableSkills"),
+            userGroupsContainer: $("#userGroupsContainer"),
+            userSkillsContainer: $("#userSkillsContainer")
+        }
+
+    });
+    userEditView.InitValidate();
+</script>
+</div>
+      <div class="modal-footer">
+        <button data-dismiss="modal" class="btn btn-default" type="button">Close</button>
+        <button class="btn btn-primary save-btn" type="button" style="display: inline-block;" onclick="userEditView.Save()">Save changes</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+    
+
+
+
+<script src="/Scripts/scripts.js"></script>
+<script>
+    function DisplayMessage(response) {
+        if (response.MessageType == 2) {
+
+            alertify.success(response.Text);
+        } else
+            if (response.MessageType == 4) {
+                window.location.href = response.Text;
+            }
+            else if (response.MessageType == 1) {
+                alertify.error(response.Text);
+            }
+            else if (response.MessageType == 3) {
+                alertify.log(response.Text);
+           }
+    }
+
+    
+</script>
+<div id="requestLoaderContainer" style="position: fixed; top: 0px; left: 0px; bottom: 0px; right: 0px; z-index: 2000; display: none;"></div><div class="modal-backdrop fade in"></div></body></html>

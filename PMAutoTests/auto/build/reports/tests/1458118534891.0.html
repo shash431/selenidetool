@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head>
+        <meta charset="UTF-8" />
+        <title>List</title>
+       <link href="/Content/css/reset.css" rel="stylesheet" />
+       <link type="text/css" rel="stylesheet" href="/Scripts/utils/bootstrap-3.3.2/css/bootstrap.css" />
+          <link href="/Content/css/clearfix.css" rel="stylesheet" />
+
+
+        <link type="text/css" rel="stylesheet" href="/Content/css/font-awesome.min.css" />
+        <link href="/Content/css/jquery-ui.structure.css" rel="stylesheet" />
+        <link href="/Scripts/utils/bootstrap-star-rating-master/css/star-rating.css" type="text/css" rel="stylesheet" />
+        <link href="/Content/css/styles.css" rel="stylesheet" />
+        <link href="/Content/css/bootstrap.colorpickersliders.css" rel="stylesheet" />
+        <link href="/Scripts/utils/slick/slick.css" type="text/css" rel="stylesheet" />
+        <link href="/Scripts/utils/timepicker/jquery.timepicker.css" type="text/css" rel="stylesheet" />
+        <link href="/Scripts/utils/mCustomScrollbar/jquery.mCustomScrollbar.css" type="text/css" rel="stylesheet" />
+        <link href="//blueimp.github.io/Gallery/css/blueimp-gallery.min.css" rel="stylesheet" />
+        <link href="/Scripts/utils/jQuery-File-Upload-9.10.5/css/jquery.fileupload.css" type="text/css" rel="stylesheet" />
+        <link href="/Scripts/utils/jQuery-File-Upload-9.10.5/css/jquery.fileupload-ui.css" type="text/css" rel="stylesheet" />
+        <link href="/Scripts/utils/alertify.js-0.3.11/themes/alertify.core.css" type="text/css" rel="stylesheet" />
+        <link href="/Scripts/utils/alertify.js-0.3.11/themes/alertify.bootstrap.css" type="text/css" rel="stylesheet" />
+        <link href="/Scripts/utils/bootstrap-datepicker/css/bootstrap-datepicker.css" type="text/css" rel="stylesheet" />
+        
+        
+        <script type="text/javascript" src="/Scripts/jquery-1.9.1.min.js"></script>
+        <script src="/Scripts/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="/Scripts/utils/bootstrap-3.3.2/js/bootstrap.js"></script>
+        <script type="text/javascript" src="/Scripts/utils/Ajax.js"></script>
+        <script type="text/javascript" src="/Scripts/utils/AjaxLoader.js"></script>
+        <script type="text/javascript" src="/Scripts/utils/PageLoader.js"></script>
+        <script type="text/javascript" src="/Scripts/utils/ViewLoader.js"></script>
+        <script type="text/javascript" src="/Scripts/utils/Menu.js"></script>
+        <script type="text/javascript" src="/Scripts/utils/SiteRouter.js"></script>
+        <script type="text/javascript" src="/Scripts/utils/TableFixer.js"></script>
+        <script type="text/javascript" src="/Scripts/utils/jquery.bootpag.js"></script>
+        <script type="text/javascript" src="/Scripts/utils/jqueryExtend.js"></script>
+        <script type="text/javascript" src="/Scripts/jquery.validate.js"></script>
+    
+        <script src="/Scripts/jquery.fileupload.js" type="text/javascript"></script>
+        <script src="/Scripts/jquery.fileupload-process.js" type="text/javascript"></script>
+        <script src="/Scripts/jquery.fileupload-validate.js" type="text/javascript"></script>
+        
+        <script src="/Scripts/Common/AjaxLoader.js" type="text/javascript"></script>
+        <script src="/Scripts/Common/ColorHelper.js" type="text/javascript"></script>
+        <script src="/Scripts/Common/DatePickerHelper.js" type="text/javascript"></script>
+        <script src="/Scripts/Common/JsHelpers.js" type="text/javascript"></script>
+        <script src="/Scripts/Common/PaginationHelper.js" type="text/javascript"></script>
+        <script src="/Scripts/Common/Popup.js" type="text/javascript"></script>
+        <script src="/Scripts/Common/PopupLoader.js" type="text/javascript"></script>
+        <script src="/Scripts/Common/Request.js" type="text/javascript"></script>
+        <script src="/Scripts/Common/TplGrid.js" type="text/javascript"></script>
+        <script src="/Scripts/Common/UploadHelper.js" type="text/javascript"></script>
+        <script src="/Scripts/Common/Validator.js" type="text/javascript"></script>
+        <script src="/Scripts/Common/bootstrap.colorpickersliders.js" type="text/javascript"></script>
+        <script src="/Scripts/Common/farbtastic.js" type="text/javascript"></script>
+        <script src="/Scripts/Common/highcharts.js" type="text/javascript"></script>
+        <script src="/Scripts/Common/jquery.cookie.js" type="text/javascript"></script>
+        <script src="/Scripts/Common/jquery.toastmessage.js" type="text/javascript"></script>
+        <script src="/Scripts/Common/FileUploadCustom.js" type="text/javascript"></script>
+        <script src="/Scripts/Common/moment-with-langs.js" type="text/javascript"></script>
+        <script src="/Scripts/Common/moment-with-langs.min.js" type="text/javascript"></script>
+        <script src="/Scripts/Common/moment.js" type="text/javascript"></script>
+        <script src="/Scripts/Common/moment.min.js" type="text/javascript"></script>
+        <script src="/Scripts/Common/tinycolor.js" type="text/javascript"></script>
+        <script src="/Scripts/Common/View.js" type="text/javascript"></script>
+        <script src="/Scripts/Utils/Spin.js" type="text/javascript"></script><style></style>
+        <script src="/Scripts/Utils/RequestLoader.js" type="text/javascript"></script>
+        <script src="/Scripts/Common/FileUploadCustom.js" type="text/javascript"></script>
+        <script src="/Scripts/utils/slick/slick.min.js" type="text/javascript"></script>
+        <script src="/Scripts/utils/timepicker/jquery.timepicker.js" type="text/javascript"></script>
+        <script src="/Scripts/utils/ckeditor/ckeditor.js"></script><style>.cke{visibility:hidden;}</style>
+        <script type="text/javascript" src="/Scripts/utils/bootstrap-star-rating-master/js/star-rating.js"></script>
+        <script type="text/javascript" src="/Scripts/utils/mCustomScrollbar/jquery.mCustomScrollbar.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.12/jquery.mousewheel.min.js"></script>
+
+        
+        <script src="/Scripts/utils/jQuery-File-Upload-9.10.5/js/jquery.iframe-transport.js"></script>
+        <script src="/Scripts/utils/jQuery-File-Upload-9.10.5/js/jquery.fileupload.js"></script>
+        <script src="/Scripts/utils/jQuery-File-Upload-9.10.5/js/jquery.fileupload-process.js"></script>
+        <script src="//blueimp.github.io/JavaScript-Load-Image/js/load-image.all.min.js"></script>
+        <script src="/Scripts/utils/jQuery-File-Upload-9.10.5/js/jquery.fileupload-image.js"></script>
+        <script src="/Scripts/utils/jQuery-File-Upload-9.10.5/js/jquery.fileupload-audio.js"></script>
+        <script src="/Scripts/utils/jQuery-File-Upload-9.10.5/js/jquery.fileupload-video.js"></script>
+        <script src="/Scripts/utils/jQuery-File-Upload-9.10.5/js/jquery.fileupload-validate.js"></script>
+        <script src="/Scripts/utils/jQuery-File-Upload-9.10.5/js/jquery.fileupload-ui.js"></script>
+        <script src="/Scripts/utils/alertify.js-0.3.11/src/alertify.js"></script>
+        <script src="/Scripts/utils/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+
+        <script>requestLoader.init();</script>
+    </head>
+        
+<body>
+  <header>
+    <div class="container cf">
+      <a href="/" class="logo">Project Management Tool</a>
+      <p class="welcome">
+        Hello, Test Project Manager 
+        <a href="/Application/Logout">Logout</a>
+      </p>
+    </div>
+  </header>
+  <nav class="">
+      <div class="container col-md-10 col-md-offset-1">
+      <nav class="navbar ">
+          <div class="container-fluid">
+              <div id="bs-example-navbar-collapse-1" class="collapse navbar-collapse">
+                  <ul class="nav navbar-nav main-navbar">
+
+                      <li class="dropdown">
+                              <a data-toggle="dropdown" href="#"><span class="menu-option-icon project-icon"></span>Project</a>
+                              <ul class="dropdown-menu">
+                                  <li><a href="/">Project List</a></li>
+                              </ul>
+                      </li>
+                      <li class="dropdown">
+                              <a data-toggle="dropdown" href="#"><span class="menu-option-icon finance-icon"></span>Finance</a>
+                              <ul class="dropdown-menu">
+                                      <li><a href="http://pmtool.mgrwin.com/Report/MonthlyPayments">Monthly Sales Report</a></li>
+                                                                        <li><a href="http://pmtool.mgrwin.com/Report/FinancePlan">Finance Plan</a></li>
+                                                                        <li><a href="http://pmtool.mgrwin.com/MonthPlan/PlanView">Sales Plan</a></li>
+                                                                        <li><a href="http://pmtool.mgrwin.com/Proposal/GetPlanning">Proposal Plan</a></li>
+                                                                        <li><a href="http://pmtool.mgrwin.com/Invoice/InvoiceList">Invoice List</a></li>
+                                                                                                  </ul>
+                      </li>
+                      <li class="dropdown">
+                          <a data-toggle="dropdown" href="#">Dashboard</a>
+                          <ul class="dropdown-menu">
+                              <li><a href="http://pmtool.mgrwin.com/Dashboard/SpentTimeDashboard">Spent Time Dashboard</a></li>
+                          </ul>
+                      </li>
+                      <li class="dropdown">
+                              <a data-toggle="dropdown" href="#"><span class="menu-option-icon report-icon"></span>Report</a>
+                              <ul class="dropdown-menu">
+                                                                        <li><a href="http://pmtool.mgrwin.com/HoursMonitoring/TeamleadHoursMonitoring">Teamlead Hours Monitoring</a></li>
+                                                                        <li><a href="http://pmtool.mgrwin.com/Report/PmHoursView">PM load</a></li>
+                                                                        <li><a href="http://pmtool.mgrwin.com/Report/DevLoadReportView">Developers load</a></li>
+                                                                        <li><a href="http://pmtool.mgrwin.com/Report/DeveloperDailySpentTimeReport">Developers spent hours</a></li>
+                                                                        <li><a href="http://pmtool.mgrwin.com/Report/SkillsLoadReportView">Forecast by technologies</a></li>
+                                                                        <li><a href="http://pmtool.mgrwin.com/Project/ProjectDashboardView">Dashboard</a></li>
+                                                                        <li><a href="http://pmtool.mgrwin.com/Project/ProjectDashboard12MonthView">Dashboard year</a></li>
+                                                                        <li><a href="http://pmtool.mgrwin.com/Proposal/GetReport">Proposals report</a></li>
+                                                                        <li><a href="http://pmtool.mgrwin.com/Proposal/ProposalByTechnologyReport">Proposal By Technology Report</a></li>
+                                                                        <li><a href="http://pmtool.mgrwin.com/Report/FactTimesheetHoursReport">Fact/Timesheet Hours Report</a></li>
+                                                                        <li><a href="http://pmtool.mgrwin.com/Report/AllocationReport">Allocation Report</a></li>
+
+                                  <li class="item"><a href="http://pmtool.mgrwin.com/Report/UnpaidActivityView">Not billable hours</a></li>
+
+
+                                  <li class="item"><a href="http://pmtool.mgrwin.com/Report/KpiReport">KPI Report</a></li>
+
+
+                                  <li class="item"><a href="http://pmtool.mgrwin.com/Report/ClientFeedbackReport">Client Feedback</a></li>
+
+                              </ul>
+                      </li>
+                          <li onclick="window.location = 'http://pmtool.mgrwin.com/HRSpace/Dashboard' ">
+                              <a data-toggle="dropdown" href=""><span class="menu-name"> HR Space</span> </a>
+                          </li>
+
+                      <li class="dropdown">
+                          <a data-toggle="dropdown" href="#">Estimation</a>
+                          <ul class="dropdown-menu">
+                                  <li><a href="http://pmtool.mgrwin.com/Estimation/SmRequestList">Estimation Requests</a></li>
+                              <li><a href="http://pmtool.mgrwin.com/Estimation/TeamleadRequestList">Teamlead Estimation Requests</a></li>
+                              <li><a href="http://pmtool.mgrwin.com/Estimation/DeveloperEstimationRequestList">Developer Estimation Requests</a></li>
+                          </ul>
+                      </li>
+                          <li class="dropdown">
+                              <a data-toggle="dropdown" href="#"><span class=""></span>PM Feedback</a>
+                              <ul class="dropdown-menu">
+                                      <li><a href="http://pmtool.mgrwin.com/PmFeedback/DevelopersList"><span class="menu-option-icon"></span>My Feedbacks</a></li>
+                                                                        <li><a href="http://pmtool.mgrwin.com/PmFeedback/SmList"><span class="menu-option-icon"></span>My Feedbacks</a></li>
+                                                                        <li><a href="http://pmtool.mgrwin.com/PmFeedback/TopList"><span class="menu-option-icon"></span>View Feedbacks</a></li>
+                              </ul>
+                          </li>
+                                                <li><a href="http://pmtool.mgrwin.com/Resources/ResourceAllocation"><span class="menu-option-icon resource-icon"></span>Resource Allocation</a></li>
+                                                <li class="dropdown">
+                              <a data-toggle="dropdown" href="#"><span class="menu-option-icon admin-icon"></span>Administration</a>
+                              <ul class="dropdown-menu">
+                                  <li><a href="http://pmtool.mgrwin.com/Administration/Index">Administration panel</a></li>
+                                  <li><a href="http://pmtool.mgrwin.com/Settings/IndexView">Role management</a></li>
+
+                              </ul>
+                          </li>
+                                             <li class="dropdown">
+                          <a data-toggle="dropdown" href="#"><i class="fa fa-plane"></i><span> Vacation</span> </a>
+                          <ul class="dropdown-menu">
+                              <li><a href="http://pmtool.mgrwin.com/Vacation/Index">Calendar</a></li>
+                          </ul>
+                      </li>
+                  </ul>
+                  
+              </div><!-- /.navbar-collapse -->
+          </div><!-- /.container-fluid -->
+      </nav>
+
+      </div>
+  </nav>
+    <main>
+        <div class="container font12 col-md-10 col-md-offset-1">
+            
+
+<div class="page-title">
+        <h2>Projects</h2>
+        <a href="/Project/AddProjectInfo" class="btn btn-simple btn-lg"><span class="plus-icon"></span>Add project</a>
+      </div>
+<div id="filterContainer" class="filters font12">
+    <table>
+        <caption>Filter</caption>
+        <tbody><tr>
+            <td>Project Name:</td>
+            <td><input type="text" id="ProjectName" /></td>
+            <td id="ProjectManagersContainer" colspan="3">
+                <label class="manager-label">Pm:</label>
+                
+
+
+
+<style>
+
+</style>
+
+
+<div class="inner-slider-container">
+
+        <div id="carouselv" class="slider-inner slick-initialized slick-slider">
+                <div class="slick-list draggable" tabindex="0"><div class="slick-track" style="opacity: 1; width: 147px; transform: translate3d(0px, 0px, 0px);"><div data-id="9" class="slider-item slick-slide slick-active" index="0" style="width: 49px;">
+                    <img title="Alexey Belev" src="http://www.gravatar.com/avatar/9badcd15904a5362cfdc35363baaf50e" />
+                </div><div data-id="59" class="slider-item slick-slide slick-active" index="1" style="width: 49px;">
+                    <img title="Elena Poluektova" src="http://www.gravatar.com/avatar/b2e684376ed4effecdcf55cb25bd58c7" />
+                </div><div data-id="114" class="slider-item slick-slide slick-active" index="2" style="width: 49px;">
+                    <img title="Konstantin Martynov" src="http://www.gravatar.com/avatar/288ea34ab074db2e391c077800476b84" />
+                </div></div></div>
+                
+                
+        </div>
+
+
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#carouselv').slick({
+            infinite: false,
+            slidesToShow: 10,
+            slidesToScroll: 10
+        });
+})
+</script>
+            </td>
+            
+            
+        </tr>
+        <tr>
+            <td>Status:</td>
+            <td>
+                <label class="success for-checkbox"><input type="checkbox" data-id="7" checked="checked" /> Active</label>
+                <label class="for-checkbox"><input type="checkbox" data-id="8" /> Paused</label>
+                <label class="danger for-checkbox"><input type="checkbox" data-id="10" /> Archived</label>
+            </td>
+
+            <td id="SalesManagersContainer" colspan="3">
+                <label class="manager-label">Sm:</label>
+                
+
+
+<div class="inner-slider-container">
+
+        <div id="carouselvs" class="slider-inner slick-initialized slick-slider">
+                <div class="slick-list draggable" tabindex="0"><div class="slick-track" style="opacity: 1; width: 882px; transform: translate3d(0px, 0px, 0px);"><div data-id="28" class="slider-item slick-slide slick-active" index="0" style="width: 49px;">
+                        <img title="Alexey Galaktionov" src="http://www.gravatar.com/avatar/c035928d4fba89af735612231cdeda45" />
+                   
+                </div><div data-id="86" class="slider-item slick-slide slick-active" index="1" style="width: 49px;">
+                        <img title="Test Sales" src="http://www.gravatar.com/avatar/3c281ee5da63222ccdfcb32ec4d0f2e2" />
+                   
+                </div><div data-id="39" class="slider-item slick-slide slick-active" index="2" style="width: 49px;">
+                        <img title="Aleksey Kondratev" src="http://www.gravatar.com/avatar/fa63b02d042c304927c69de96e89465e" />
+                   
+                </div><div data-id="62" class="slider-item slick-slide slick-active" index="3" style="width: 49px;">
+                        <img title="Alena Polesheva" src="http://www.gravatar.com/avatar/d6790f354a3b6acaacc7b4f8e4743f54" />
+                   
+                </div><div data-id="57" class="slider-item slick-slide slick-active" index="4" style="width: 49px;">
+                        <img title="Alexander Pastukhov" src="http://www.gravatar.com/avatar/6fb654ecd8fe45235665ed2b9c10c2e4" />
+                   
+                </div><div data-id="6" class="slider-item slick-slide slick-active" index="5" style="width: 49px;">
+                        <img title="Alexandr Anisimov" src="http://www.gravatar.com/avatar/8014d94326a48e4b9d6a138862766008" />
+                   
+                </div><div data-id="94" class="slider-item slick-slide slick-active" index="6" style="width: 49px;">
+                        <img title="Alexander Zaytsev" src="http://www.gravatar.com/avatar/da75d842e0742d92443dfefa7501a541" />
+                   
+                </div><div data-id="55" class="slider-item slick-slide slick-active" index="7" style="width: 49px;">
+                        <img title="Anton Nikolskiy" src="http://www.gravatar.com/avatar/d04744bc4bae1313fb67e7cdc3b42281" />
+                   
+                </div><div data-id="31" class="slider-item slick-slide slick-active" index="8" style="width: 49px;">
+                        <img title="Artur Grishkevich" src="http://www.gravatar.com/avatar/307f84a093fd589aeca09e45fb852530" />
+                   
+                </div><div data-id="80" class="slider-item slick-slide slick-active" index="9" style="width: 49px;">
+                        <img title="Kirill Starodubtsev" src="http://www.gravatar.com/avatar/d17b8a62106e84d766d0a4591d57fee6" />
+                   
+                </div><div data-id="88" class="slider-item slick-slide" index="10" style="width: 49px;">
+                        <img title="Aleksey Tokar" src="http://www.gravatar.com/avatar/be5007acbb40f99a441e53184e33dbbe" />
+                   
+                </div><div data-id="46" class="slider-item slick-slide" index="11" style="width: 49px;">
+                        <img title="Alexander Lysyak" src="http://www.gravatar.com/avatar/6b7d8b497e09bfa0f0d6e1d344249138" />
+                   
+                </div><div data-id="32" class="slider-item slick-slide" index="12" style="width: 49px;">
+                        <img title="Daria Gvozdeva" src="http://www.gravatar.com/avatar/29dffcd097a3331ebe7f3701d7ac6164" />
+                   
+                </div><div data-id="44" class="slider-item slick-slide" index="13" style="width: 49px;">
+                        <img title="Alexandra Lunkova" src="http://www.gravatar.com/avatar/ad55e7767ef32dd42144756787176849" />
+                   
+                </div><div data-id="26" class="slider-item slick-slide" index="14" style="width: 49px;">
+                        <img title="Alexandra Ermolaeva" src="http://www.gravatar.com/avatar/29b509df35f885b407dee554cad1cdf0" />
+                   
+                </div><div data-id="9" class="slider-item slick-slide" index="15" style="width: 49px;">
+                        <img title="Alexey Belev" src="http://www.gravatar.com/avatar/9badcd15904a5362cfdc35363baaf50e" />
+                   
+                </div><div data-id="128" class="slider-item slick-slide" index="16" style="width: 49px;">
+                        <img title="Olga Pokrovskaya (PM)" src="http://www.gravatar.com/avatar/ac64cbb3f6014b7a0c8798303b6f39b6" />
+                   
+                </div><div data-id="114" class="slider-item slick-slide" index="17" style="width: 49px;">
+                        <img title="Konstantin Martynov" src="http://www.gravatar.com/avatar/288ea34ab074db2e391c077800476b84" />
+                   
+                </div></div></div>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+        <button class="slick-prev slick-disabled" data-role="none" type="button" style="display: block;">Previous</button><button class="slick-next" data-role="none" type="button" style="display: block;">Next</button></div>
+
+
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#carouselvs').slick({
+            infinite: false,
+            slidesToShow: 10,
+            slidesToScroll: 10
+        });
+    });
+
+</script>
+            </td>
+            
+            
+        </tr>
+        <tr>
+            <td>Project Type:</td>
+            <td>
+                <input type="radio" value="4" name="PaymentSchemeId" data-paymentid="4" id="FixedPrice" /><label for="FixedPrice">Fixed Price</label>
+                <input type="radio" value="5" name="PaymentSchemeId" data-paymentid="5" id="HourlyRate" /><label for="HourlyRate">Hourly Rate</label>
+                <input type="radio" value="" name="PaymentSchemeId" data-paymentid="0" id="Both" /><label for="Both">Both</label>
+            </td>
+            <td>
+                
+            </td>
+            <td>
+                
+            </td>
+            <td>
+                
+            </td>
+            
+            <td class="text-right" colspan="2">
+                <button onclick="projectListView.AcceptFilter();return false;" class="btn btn-simple" type="button">Filter</button>
+                <button onclick="projectListView.ClearFilter();return false;" class="btn btn-cancel" type="button">Clear</button>
+            </td>
+        </tr>
+        
+    </tbody></table>
+</div>
+
+<div class="font12" id="ProjectsGridContainer">
+
+<table class="projects">
+    <tbody><tr>
+        <th>Name</th>
+        <th>
+            Sales
+            <br />
+            Manager
+        </th>
+        <th>Budget</th>
+        <th>
+            Pay / Hours
+            <br />
+            Pay Rate
+        </th>
+        <th>
+            Project
+            <br />
+            Manager
+        </th>
+        <th>
+            Development Team
+        </th>
+        <th>
+            Hours From <br />
+            Last PayDay
+        </th>
+        <th></th>
+    </tr>
+      </tbody></table>
+
+<div class="cf">
+    <div class="paging">
+        <a class="navigation-buttons" onclick="projectListView.GoToPage(1,'0');return false;" href="">«</a>
+        <a class="navigation-buttons" onclick="projectListView.GoToPage('0', '0');return false;" href="">‹</a>
+        <input type="text" value="1" id="pagenum" /><span>Page 1 of 0</span>
+        <a class="navigation-buttons" onclick="projectListView.GoToPage('2', '0');return false;" href="">›</a>
+        <a class="navigation-buttons" onclick="projectListView.GoToPage('0', '0');return false;" href="">»</a>
+    </div>
+    <div class="item-per-page">
+        <span>Items per page:</span>
+        <select onchange="projectListView.GoToPage(1);return false;" id="itemsPerPage">
+                    <option value="10">10</option>
+                    <option value="20">20</option>
+                    <option value="30" selected="selected">30</option>
+        </select>
+    </div>
+</div>
+
+<script>
+    $('.container-to-histogram').each(function () {
+        var $chart = $(this);
+        var histogramData = [];
+
+        $chart.find('span').each(function () {
+            var $chartLine = $(this);
+            var lineData = {
+                name: $chartLine.attr('data-name'),
+                y: +$chartLine.attr('data-value'),
+                color: $chartLine.attr('data-color')
+            };
+            histogramData.push(lineData);
+        });
+
+        $chart.empty().highcharts({
+            chart: {
+                type: 'column'
+            },
+
+            credits: {
+                enabled: false
+            },
+
+            title: {
+                text: null
+            },
+
+            subtitle: {
+                text: null
+            },
+
+            xAxis: {
+                type: 'category',
+                labels: {
+                    rotation: -90,
+                    style: {
+                        fontSize: '12px',
+                        fontFamily: 'Verdana, sans-serif',
+                        color: '#3d3d3d'
+                    },
+                    x: 3,
+                    y: -75
+                },
+                lineWidth: 1,
+                tickLength: 0
+            },
+
+            yAxis: {
+                min: 0,
+                max: 100,
+                labels: {
+                    enabled: false,
+                },
+                lineWidth: 1,
+                gridLineWidth: 0,
+                title: {
+                    text: null
+                }
+            },
+
+            legend: {
+                enabled: false
+            },
+
+            tooltip: {
+                enabled: false
+            },
+
+            plotOptions: {
+                column: {
+                    pointPadding: 0.001,
+                    borderWidth: 0,
+                }
+            },
+
+            series: [{
+                name: ' ',
+                colorByPoint: true,
+                data: histogramData
+            }]
+        });
+    });
+</script>
+
+<script>
+    $("#pagenum").keyup(function (event) {
+
+        if (event.keyCode == 13) {
+            projectListView.GoToPage($("#pagenum").val(), '0');
+        }
+
+    });
+    
+    function GetFinanceIncomePopup(projectId, container) {
+        request.page('/FinanceIncome/GetFinanceIncomePopup', { projectId: projectId }, container);
+    
+    }
+
+    $('html').on('click', function (e) {
+        if (!$(e.target).closest('.sell-hours-popup-container').length) {
+            $('.sell-hours-popup-container').empty();
+        }
+        
+    });
+    
+    function SaveInvoicedHours(projectId, el) {
+        request.post('/SellHours/Save', { ProjectId: projectId, HoursInvoiced: el.val() }, function (response) {
+            //DisplayMessage(response);
+            if (response.MessageType == 2) {
+                el.closest('.sell-hours-popup-container').empty();
+            }
+        });
+    }
+
+</script></div>
+<script src="/Scripts/Views/Project/ProjectListView.js"></script>
+<script>
+
+    var filterModel = JSON.parse($.cookie("filter")||JSON.stringify(""));
+    
+    projectListView.Init({
+        urls: {
+            gridUrl: '/Project/Grid'
+        },
+        elements: {
+            ProjectName: $("#ProjectName"),
+            Pm: $("#Pm"),
+            Sm: $("#Sm"),
+            Technologies: $("#Technologies"),
+            DeadlineStart: $("#DeadlineStart"),
+            DeadlineEnd: $("#DeadlineEnd"),
+            filterContainer: $("#filterContainer"),
+            container: $("#ProjectsGridContainer"),
+            PmContainer: $("#ProjectManagersContainer"),
+            SmContainer: $("#SalesManagersContainer")
+        },
+        data: {
+            filter:filterModel
+        }
+
+    });
+    
+</script>
+        </div>
+    </main>
+    
+    <div class="shadow"></div>
+
+<div class="popup-wrapper"></div>
+<div id="iframeContainer">
+</div>
+
+<div id="bootstrapModal" class="modal fade">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button aria-label="Close" data-dismiss="modal" class="close" type="button"><span aria-hidden="true">×</span></button>
+        <h4 class="modal-title">Modal title</h4>
+      </div>
+      <div class="modal-body">
+        <p>One fine body…</p>
+      </div>
+      <div class="modal-footer">
+        <button data-dismiss="modal" class="btn btn-default" type="button">Close</button>
+        <button class="btn btn-primary save-btn" type="button">Save changes</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+    
+
+
+
+<script src="/Scripts/scripts.js"></script>
+<script>
+    function DisplayMessage(response) {
+        if (response.MessageType == 2) {
+            alertify.success(response.Text);
+        } else
+            if (response.MessageType == 4) {
+                window.location.href = response.Text;
+            }
+            else if (response.MessageType == 1) {
+                alertify.error(response.Text);
+            }
+            else if (response.MessageType == 3) {
+                noty({
+                    animation: {
+                        open: { height: 'toggle' },
+                        close: { height: 'toggle' },
+                        easing: 'swing',
+                        speed: 100
+                    },
+
+                    layout: 'top',
+                    template: '&lt;div class="noty-warning"&gt;&lt;span class="noty_text"&gt;&lt;/span&gt;&lt;/div&gt;',
+                    text: response.Text,
+                    timeout: 10000
+                });
+            }
+    }
+</script>
+<div id="requestLoaderContainer" style="position: fixed; top: 0px; left: 0px; bottom: 0px; right: 0px; z-index: 2000; display: none;"></div></body></html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml"><head>
+    <title>Login - Project Management Tool</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <link href="/Content/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="/Content/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="/Content/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css" />
+    <link href="/Content/style.css" rel="stylesheet" type="text/css" />
+    <link href="/Content/pages/login.css" rel="stylesheet" type="text/css" />
+   
+    <script src="/Content/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="/Scripts/knockout/knockout.js" type="text/javascript"></script>
+    <script src="/Scripts/knockout/knockout.mapping.js" type="text/javascript"></script>
+</head>
+<body class="login_page_bg">
+    <div class="login_center_bg">
+        <div class="login_form_wr">
+            <div class="brand">
+                <img src="/Content/images/logo_big.png" />
+                <span>Project Management Tool</span>
+            </div>
+            <form class="form-horizontal" action="/Login/Login">
+
+                 
+
+                <div class="control-group">
+                    <i class="fa fa-user"></i>
+                    <input class="login_input" type="text" id="login" name="login" value="" placeholder="Login" />
+                </div>
+                <div class="control-group">
+                    <i class="fa fa-lock"></i>
+                    <input class="login_input" type="password" id="password" name="password" value="" placeholder="Password" />
+                </div>
+                <input type="hidden" id="redirectUrl" name="redirectUrl" />
+                <div class="text_align_center">
+                    <label class="checkbox_wr">
+                        <input type="checkbox" checked="checked" name="IsRememberMe" value="true" />
+                        <span>Remember me</span>
+                    </label>
+                </div>
+                <button type="submit" class="login_btn">
+                    <i class="fa fa-sign-in"></i>
+                    <span>Login</span>
+                </button>
+            </form>
+        </div>
+    </div>
+
+
+</body></html>
